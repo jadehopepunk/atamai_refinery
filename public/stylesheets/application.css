@@ -21,12 +21,12 @@ h1#body_content_title {
 }
 
 #page_container {
-  background-image: url(../images/layout/body_outside_background.gif);
+  background-image: url(/images/layout/body_outside_background.gif);
   background-repeat: repeat;
   background-color: #E7DDD4; }
   
 header {
-  background-image: url(../images/layout/header.jpg);
+  background-image: url(/images/layout/header.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   width: 100%;
@@ -75,13 +75,13 @@ header {
         display: block;
         width: 105px;
         height: 27px;
-        background-image: url(../images/layout/tab.png);
+        background-image: url(/images/layout/tab.png);
         color: #cccccc;
         text-align: center;
         line-height: 27px;
         text-decoration: none; }
       header #menu ul li.selected a {
-        background-image: url(../images/layout/tab_highlighted.png);
+        background-image: url(/images/layout/tab_highlighted.png);
         height: 26px;
         margin-top: 1px;
         color: white; }
@@ -100,7 +100,7 @@ footer {
 section#page {
   width: 100%;
   margin: 0;
-  background-image: url(../images/layout/body.jpg);
+  background-image: url(/images/layout/body.jpg);
   background-repeat: repeat-y;
   background-position: top center;
   border-bottom: 2px solid black; }

@@ -11,6 +11,7 @@ set :rails_env, "production"
 set :deploy_to, "/home/atamai/public_html/atamai_refinery"
 set :user, 'atamai'
 set :use_sudo, false
+set :rake, 'bundle exec rake'
 
 namespace :deploy do
   task :start do ; end
