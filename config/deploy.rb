@@ -1,5 +1,5 @@
 set :application, "atamai_refinery"
-set :repository,  "git@github.com:craigambrose/atamai_refinery.git"
+set :repository,  "git://github.com/craigambrose/atamai_refinery.git"
 
 set :domain, "refinery.atamai.craigambrose.com"
 role :web, domain
