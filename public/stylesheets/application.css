@@ -31,6 +31,11 @@ h1#body_content_title {
   .fixed .fixed_inner {
     padding: 20px; }
 
+header, footer {
+  width: 100%;
+  margin: 0;  
+}
+
 #page_container {
   background-image: url(/images/layout/body_outside_background.gif);
   background-repeat: repeat;
@@ -40,7 +45,6 @@ h1#body_content_title {
   background-color: #323f2f;
   background-image: url(/images/layout/header_background.gif);
   background-repeat: repeat;
-  width: 100%;
   margin: 0;
   padding: 0;
   border-bottom: 2px solid black }
@@ -124,13 +128,17 @@ section#page {
     width: 960px;
     margin: 0 auto;
   }
+
+  section#page #body_content {
+    min-height: 600px;
+  }
   
   section#page #body_content_left {
-    width: 580px
+    width: 680px
   }
   
   section#page #body_content_right {
-    width: 380px;
+    width: 280px;
   }
   
 #hero {
@@ -174,4 +182,42 @@ section#page {
           background-image: url(/images/layout/hero_top.jpg);
           background-position: top center;
           background-repeat: no-repeat; }
+
+#blog_posts > article {
+  background-color: #f7f4f2;
+  border: 2px solid #ece3dc;
+  margin-bottom: 10px;
+  padding: 10px;
+  *display: inline-block; }
+  #blog_posts > article:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  #blog_posts > article img {
+    float: left;
+    margin-right: 10px;
+    border: 1px solid #302824; }
+  #blog_posts > article a.community_link {
+    float: right; }
+  #blog_posts > article header h1 {
+    margin: 0; 
+    color: #1f2b1b; }
+    #blog_posts > article details time.posted_at {
+      float: right;
+      color: #888;
+    }
+    #blog_posts > article details aside.tagged {
+    display: none; }
+  #blog_posts > article > section {
+    margin: 0; }
+    #blog_posts > article > section p {
+      margin-bottom: 0; }
+  #blog_posts > article footer p {
+    margin: 0;
+    float: left }
+  #blog_posts > article footer aside {
+    float: right;
+    color: #888; }
   
