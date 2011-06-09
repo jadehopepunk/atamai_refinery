@@ -7,16 +7,28 @@
     <%= render :partial => "/shared/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
     <div id="page_container">
       <header>
-        <%= render :partial => "/shared/header" -%>
+        <div class="inner">
+          <%= render :partial => "/shared/header" -%>
+        </div>
       </header>
+      
+      <% if current_page?('/') %>
+        <%= render :partial => '/shared/hero' %>
+      <% end %>
+
       <section id='page'>
         <div class="section_contents">
           <%= yield %>
         </div>
       </section>
+      
       <footer>
-        <div class="section_contents">
-          <%= render :partial => "/shared/footer" -%>
+        <div class="inner">
+          <div class="fixed">
+            <div class="fixed_inner">
+              <%= render :partial => "/shared/footer" -%>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
