@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110609080058) do
+ActiveRecord::Schema.define(:version => 20110609091535) do
 
   create_table "blog_categories", :force => true do |t|
     t.string   "title"
@@ -62,6 +62,26 @@ ActiveRecord::Schema.define(:version => 20110609080058) do
     t.datetime "updated_at"
     t.string   "image_uid"
     t.string   "image_ext"
+  end
+
+  create_table "inquiries", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "spam",       :default => false
+  end
+
+  add_index "inquiries", ["id"], :name => "index_inquiries_on_id"
+
+  create_table "inquiry_settings", :force => true do |t|
+    t.string   "name"
+    t.text     "value"
+    t.boolean  "destroyable"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "page_part_translations", :force => true do |t|
