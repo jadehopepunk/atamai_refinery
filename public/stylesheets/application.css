@@ -20,6 +20,10 @@ h1 {
     font-size: 170%;
   }
 
+h2 {
+  color: #5F785A;
+}
+
 h1#body_content_title {
   margin: 0;
   font-size: 150%;
@@ -144,16 +148,33 @@ section#page {
   }
 
   section#page #body_content {
-    min-height: 600px;
-  }
+    min-height: 600px; }
   
   section#page #body_content_left {
-    width: 680px
-  }
+    width: 680px }
+
+    section#page #body_content_left form {
+      padding-top: 12px; }
+
+      section#page #body_content_left form label {
+        float: left;
+        width: 150px; }
+
+      section#page #body_content_left form input {
+        width: 200px; }
+
+      section#page #body_content_left form .actions, section#page #body_content_left form .form-actions {
+        margin-left: 150px; }
+
+      section#page #body_content_left form .actions input, section#page #body_content_left form .form-actions input {
+        width: auto; }
+
+      section#page #body_content_left form .field {
+        margin: 12px 0; }
   
   section#page #body_content_right {
-    width: 280px;
-  }
+    width: 280px; }
+  
   
 #hero {
   clear: both;
@@ -217,6 +238,7 @@ section#page {
     float: right; }
   #blog_posts > article header h1 {
     margin: 0; 
+    font-size: 11pt;
     color: #1f2b1b; }
     #blog_posts > article details time.posted_at {
       float: right;
