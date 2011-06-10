@@ -47,12 +47,27 @@ header, footer {
   background-repeat: repeat;
   margin: 0;
   padding: 0;
-  border-bottom: 2px solid black }
+  border-bottom: 2px solid black;
+  position: relative }
   
-  #page_container > header .inner {
+  #page_container > header > .inner {
     background-image: url(/images/layout/header.jpg);
     background-position: top center;
-    background-repeat: no-repeat; }    
+    background-repeat: no-repeat;}   
+
+    #page_container > header > .inner .search_box {
+      bottom: 0;
+      text-align: right;
+      background-color: #1F2B1B; } 
+
+      #page_container > header > .inner .search_box > .inner {
+        width: 980px;
+        margin: 0 auto;
+        padding: 3px 10px } 
+        
+      #page_container > header > .inner .search_box input#query {
+        background-color: #E7DDD4;
+        border: 2px solid black }
       
   #page_container > header h1#logo {
     height: 60px;
@@ -77,7 +92,6 @@ header, footer {
     display: block;
     margin: 0;
     padding: 0;
-    border-bottom: 26px solid #1F2B1B;
     }
       
   #page_container > header #menu ul {
@@ -220,4 +234,4 @@ section#page {
   #blog_posts > article footer aside {
     float: right;
     color: #888; }
-  
+
