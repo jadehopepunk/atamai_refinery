@@ -72,25 +72,31 @@ header, footer {
       #page_container > header > .inner .search_box input#query {
         background-color: #E7DDD4;
         border: 2px solid black }
-      
-  #page_container > header h1#logo {
+
+  #page_container > header .logo_container {
     height: 60px;
-    text-align: right;
     width: 960px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
     line-height: 140%;
-    color: white; 
-    /*background-image: url(/images/layout/atamai_village_logo_white.png);
-    background-position: top center;
-    background-repeat: no-repeat; */}
-    #page_container > header h1 a, #page_container > header h1 a:link, #page_container > header h1 a:visited, #page_container > header h1 a:active {
-      color: white;
-      text-decoration: none;
-      letter-spacing: 1px;
-      font-weight: normal;
-      font-size: 150%;
-    }
+    background-image: url(/images/layout/watermark.png);
+    background-position: 60px -8px;
+    background-repeat: no-repeat; }
+    #page_container > header .logo_container h1#logo {
+      margin: 0;
+      padding: 0;
+      height: 80px;
+      text-align: right;
+      background-image: url(/images/layout/atamai_village_logo.png);
+      background-position: top right;
+      background-repeat: no-repeat; }
+      #page_container > header h1 a, #page_container > header h1 a:link, #page_container > header h1 a:visited, #page_container > header h1 a:active {
+        display: none;
+        text-decoration: none;
+        letter-spacing: 1px;
+        font-weight: normal;
+        font-size: 150%;
+      }
   
   #page_container > header #menu {
     display: block;
@@ -149,6 +155,10 @@ section#page {
 
   section#page #body_content {
     min-height: 600px; }
+    
+    section#page #body_content img {
+      border: 1px solid #333;
+    }
   
   section#page #body_content_left {
     width: 680px }
