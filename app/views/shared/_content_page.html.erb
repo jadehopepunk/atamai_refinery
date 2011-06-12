@@ -1,3 +1,4 @@
+<%= render :partial => "/shared/sub_menu" %>
 <%
   # provide a default array for collecting CSS for sections
   css = []
@@ -23,7 +24,7 @@
       unless (local_assigns[:hide_sections]||=[]).include?(section[:yield])
         s << section
       else
-        css << "no_#{section[:yield]}"
+          css << "no_#{section[:yield]}"
       end
     end unless @page.nil? or @page.parts.blank?
 
@@ -53,9 +54,12 @@
         section[:html] = "<section id='#{dom_id}'><div class='inner'><div class='inner2'><div class='inner3'>#{section[:html]}</div></div></div></section>".html_safe
       end
     else
-      css << "no_#{dom_id}"
+      unless section[:yield] == :body_content_right && @sub_menu_pages && !@sub_menu_pages.empty?
+        css << "no_#{dom_id}"
+      end
     end
   end
+  
 -%>
 <section id='body_content'<%= " class='#{css.join(' ')}'" if css.present? %>>
   <%= raw sections.map{|section| section[:html]}.join("\n") -%>

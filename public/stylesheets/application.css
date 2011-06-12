@@ -132,6 +132,8 @@ header, footer {
         height: 26px;
         margin-top: 1px;
         color: white; }
+      #page_container > header #menu ul li a, #page_container > header #menu ul li a:hover {
+        color: white; }
   
 #page_container > footer {
   border-top: 6px solid #1F2B1B;
@@ -184,7 +186,35 @@ section#page {
   
   section#page #body_content_right {
     width: 280px; }
-  
+
+#sub_menu {
+  width: 280px;
+  float: right;
+  background-color: #4A3D37; }
+
+  #sub_menu > ul {
+    margin: 10px;
+    color: white;
+    padding: 0 }
+
+  #sub_menu > ul > li {
+    float: left;
+    list-style: none outside none;
+    margin: 0 9px 5px 0;
+    padding: 0 }
+
+    #sub_menu > ul > li a, #sub_menu > ul > li a:link {
+      color: #CCC;
+      text-decoration: none;
+      font-weight: normal }
+
+    #sub_menu > ul > li a:hover {
+      color: white }
+
+    #sub_menu > ul > li.selected a, #sub_menu > ul > li.selected a:link {
+      color: white;
+      font-weight: bold }
+
   
 #hero {
   clear: both;

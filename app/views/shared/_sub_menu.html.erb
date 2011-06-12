@@ -1,0 +1,15 @@
+<% if @page %>
+  <% @sub_menu_pages = menu_pages(@page) %>
+  <% if !@sub_menu_pages.empty? %>
+    <nav id='sub_menu' class='sub_menu'>
+      <ul>
+        <%= render :partial => '/shared/menu_branch', :collection => @sub_menu_pages,
+                   :locals => {
+                     :hide_children => false,
+                     :sibling_count => (@sub_menu_pages.length - 1),
+                     :apply_css => true
+                   } -%>
+      </ul>
+    </nav>  
+  <% end %>
+<% end %>
