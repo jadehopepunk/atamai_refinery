@@ -3,12 +3,14 @@
   <% if !@sub_menu_pages.empty? %>
     <nav id='sub_menu' class='sub_menu'>
       <ul>
-        <%= render :partial => '/shared/menu_branch', :collection => @sub_menu_pages,
-                   :locals => {
-                     :hide_children => false,
-                     :sibling_count => (@sub_menu_pages.length - 1),
-                     :apply_css => true
-                   } -%>
+        <% @sub_menu_pages.each do |sub_menu_page| %>
+          <%= render :partial => '/shared/menu_branch', :object => sub_menu_page,
+                     :locals => {
+                       :hide_children => !(@page == sub_menu_page || @page.parent == sub_menu_page),
+                       :sibling_count => (@sub_menu_pages.length - 1),
+                       :apply_css => true
+                     } -%>
+        <% end %>
       </ul>
     </nav>  
   <% end %>

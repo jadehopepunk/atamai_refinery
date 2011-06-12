@@ -79,7 +79,7 @@ header, footer {
     margin: 0 auto;
     padding: 10px;
     line-height: 140%;
-    background-image: url(/images/layout/watermark.png);
+    background-image: url(/images/layout/watermark_white.png);
     background-position: 60px -8px;
     background-repeat: no-repeat; }
     #page_container > header .logo_container h1#logo {
@@ -185,7 +185,8 @@ section#page {
         margin: 12px 0; }
   
   section#page #body_content_right {
-    width: 280px; }
+    width: 280px;
+    clear: right }
 
 #sub_menu {
   width: 280px;
@@ -198,7 +199,7 @@ section#page {
     padding: 0 }
 
   #sub_menu > ul > li {
-    float: left;
+    display: block;
     list-style: none outside none;
     margin: 0 9px 5px 0;
     padding: 0 }
@@ -211,7 +212,7 @@ section#page {
     #sub_menu > ul > li a:hover {
       color: white }
 
-    #sub_menu > ul > li.selected a, #sub_menu > ul > li.selected a:link {
+    #sub_menu ul > li.selected > a, #sub_menu ul > li.selected > a:link {
       color: white;
       font-weight: bold }
 
