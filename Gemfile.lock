@@ -1,3 +1,8 @@
+PATH
+  remote: vendor/engines
+  specs:
+    refinerycms-memberships (1.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -161,4 +166,5 @@ DEPENDENCIES
   refinerycms-blog (~> 1.5)
   refinerycms-i18n (~> 1.0.0)
   refinerycms-inquiries (~> 1.0)
+  refinerycms-memberships (= 1.0)!
   refinerycms-search (~> 0.9.8)

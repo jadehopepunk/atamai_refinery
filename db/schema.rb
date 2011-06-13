@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110609091535) do
+ActiveRecord::Schema.define(:version => 20110613024131) do
 
   create_table "blog_categories", :force => true do |t|
     t.string   "title"
@@ -141,6 +141,11 @@ ActiveRecord::Schema.define(:version => 20110609091535) do
   add_index "pages", ["parent_id"], :name => "index_pages_on_parent_id"
   add_index "pages", ["rgt"], :name => "index_pages_on_rgt"
 
+  create_table "pages_roles", :id => false, :force => true do |t|
+    t.integer "page_id"
+    t.integer "role_id"
+  end
+
   create_table "refinery_settings", :force => true do |t|
     t.string   "name"
     t.text     "value"
@@ -246,6 +251,19 @@ ActiveRecord::Schema.define(:version => 20110609091535) do
     t.string   "remember_token"
     t.string   "reset_password_token"
     t.datetime "remember_created_at"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "title"
+    t.string   "phone"
+    t.string   "fax"
+    t.string   "website"
+    t.string   "organization"
+    t.string   "street_address"
+    t.string   "city"
+    t.integer  "province"
+    t.string   "postal_code"
+    t.datetime "member_until"
+    t.string   "membership_level"
   end
 
   add_index "users", ["id"], :name => "index_users_on_id"
