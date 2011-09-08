@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110613024131) do
+ActiveRecord::Schema.define(:version => 20110614064003) do
 
   create_table "blog_categories", :force => true do |t|
     t.string   "title"
@@ -51,6 +51,16 @@ ActiveRecord::Schema.define(:version => 20110613024131) do
   end
 
   add_index "blog_posts", ["id"], :name => "index_blog_posts_on_id"
+
+  create_table "image_pages", :id => false, :force => true do |t|
+    t.integer "image_id"
+    t.integer "page_id"
+    t.integer "position"
+    t.text    "caption"
+  end
+
+  add_index "image_pages", ["image_id"], :name => "index_image_pages_on_image_id"
+  add_index "image_pages", ["page_id"], :name => "index_image_pages_on_page_id"
 
   create_table "images", :force => true do |t|
     t.string   "image_mime_type"
@@ -105,6 +115,12 @@ ActiveRecord::Schema.define(:version => 20110613024131) do
 
   add_index "page_parts", ["id"], :name => "index_page_parts_on_id"
   add_index "page_parts", ["page_id"], :name => "index_page_parts_on_page_id"
+
+  create_table "page_roles", :force => true do |t|
+    t.integer "page_id"
+    t.integer "role_id"
+    t.boolean "can_read", :default => true
+  end
 
   create_table "page_translations", :force => true do |t|
     t.integer  "page_id"

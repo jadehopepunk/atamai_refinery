@@ -7,6 +7,8 @@ gem 'rails', '3.0.8'
 
 gem 'mysql2', '< 0.3'
 
+gem 'rspec'
+gem 'rspec-rails'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -34,13 +36,14 @@ gem 'mysql2', '< 0.3'
 # REFINERY CMS ================================================================
 # Anything you put in here will be overridden when the app gets updated.
 
+gem 'refinerycms-pages', '~> 1.0.0'
 gem 'refinerycms',              '~> 1.0.0'
 
 group :development, :test do
   # To use refinerycms-testing, uncomment it (if it's commented out) and run 'bundle install'
   # Then, run 'rails generate refinerycms_testing' which will copy its support files.
   # Finally, run 'rake' to run the tests.
-  # gem 'refinerycms-testing',    '~> 1.0.0'
+  gem 'refinerycms-testing',    '~> 1.0.0'
 end
 
 # END REFINERY CMS ============================================================
@@ -54,9 +57,11 @@ gem 'refinerycms-blog',         '~> 1.5'
 gem 'refinerycms-search', '~> 0.9.8'
 # gem "refinerycms-news",         '~> 1.2'
 # gem 'refinerycms-page-images',  '~> 1.0'
-gem 'refinerycms-memberships', '1.0', :path => 'vendor/engines'
+# gem 'refinerycms-memberships', '1.0', :path => 'vendor/engines'
 
 # Add i18n support (optional, you can remove this if you really want to).
 gem 'refinerycms-i18n',         '~> 1.0.0'
 
 # END USER DEFINED
+
+gem 'refinerycms-page_roles', '1.0', :path => 'vendor/engines'
