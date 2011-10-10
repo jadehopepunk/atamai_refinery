@@ -34,7 +34,8 @@ GEM
       activemodel (= 3.0.10)
       activesupport (= 3.0.10)
     activesupport (3.0.10)
-    acts-as-taggable-on (2.0.6)
+    acts-as-taggable-on (2.1.1)
+      rails
     acts_as_indexed (0.7.3)
     addressable (2.2.6)
     arel (2.0.10)
@@ -142,10 +143,10 @@ GEM
       friendly_id_globalize3 (~> 3.2.1)
       refinerycms-core (= 1.0.8)
     refinerycms-base (1.0.8)
-    refinerycms-blog (1.5.2)
+    refinerycms-blog (1.6.2)
       acts-as-taggable-on
       filters_spam (~> 0.2)
-      refinerycms-core (~> 1.0.0)
+      refinerycms-core (~> 1.0.3)
       seo_meta (~> 1.1.0)
     refinerycms-core (1.0.8)
       acts_as_indexed (~> 0.7)
@@ -246,7 +247,7 @@ DEPENDENCIES
   mysql2 (< 0.3)
   rails (= 3.0.10)
   refinerycms (= 1.0.8)
-  refinerycms-blog (~> 1.5)
+  refinerycms-blog (~> 1.6.1)
   refinerycms-i18n (~> 1.0.0)
   refinerycms-inquiries (~> 1.0)
   refinerycms-page_roles (= 1.0)!
