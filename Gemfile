@@ -53,7 +53,7 @@ end
 
 # Specify additional Refinery CMS Engines here (all optional):
 gem 'refinerycms-inquiries',    '~> 1.0'
-gem 'refinerycms-blog',         '~> 1.6.1'
+gem 'refinerycms-blog',         '1.5'
 gem 'refinerycms-search', '~> 0.9.8'
 # gem "refinerycms-news",         '~> 1.2'
 # gem 'refinerycms-page-images',  '~> 1.0'
