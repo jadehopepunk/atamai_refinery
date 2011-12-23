@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<%= render :partial => '/refinery/html_tag' %>
+  <% site_bar = render(:partial => '/refinery/site_bar', :locals => {:head => true}) -%>
+  <%= render :partial => '/refinery/head' %>
+  <body>
+    <%= site_bar -%>
+    <%= render :partial => '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+    <div id="page_container">
+      <header id="header">
+        <div class="inner">
+          <div class="inner2">
+            <%= render :partial => '/refinery/header' -%>
+          </div>
+        </div>
+      </header>
+      
+      <% if current_page?('/') %>
+        <%= render :partial => '/shared/hero' %>
+      <% end %>
+      
+      <section id="page">
+        <div class="section_contents">
+          <%= yield %>
+        </div>
+      </section>
+      
+      <footer>
+        <div class="inner">
+          <div class="fixed">
+            <div class="fixed_inner">
+              <%= render :partial => '/refinery/footer' -%>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <%= render :partial => '/refinery/javascripts' %>
+  </body>
+</html>
