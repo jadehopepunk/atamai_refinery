@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111210221939) do
+ActiveRecord::Schema.define(:version => 20111223013552) do
 
   create_table "blog_categories", :force => true do |t|
     t.string   "title"
@@ -159,18 +159,24 @@ ActiveRecord::Schema.define(:version => 20111210221939) do
     t.boolean "can_read", :default => true
   end
 
-  create_table "page_translations", :force => true do |t|
+  create_table "pages_roles", :id => false, :force => true do |t|
+    t.integer "page_id"
+    t.integer "role_id"
+  end
+
+  create_table "refinery_page_translations", :force => true do |t|
     t.integer  "page_id"
     t.string   "locale"
-    t.string   "custom_title"
+    t.string   "menu_title"
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "custom_slug"
   end
 
-  add_index "page_translations", ["page_id"], :name => "index_page_translations_on_page_id"
+  add_index "refinery_page_translations", ["page_id"], :name => "index_page_translations_on_page_id"
 
-  create_table "pages", :force => true do |t|
+  create_table "refinery_pages", :force => true do |t|
     t.integer  "parent_id"
     t.integer  "position"
     t.string   "path"
@@ -180,24 +186,32 @@ ActiveRecord::Schema.define(:version => 20111210221939) do
     t.string   "link_url"
     t.string   "menu_match"
     t.boolean  "deletable",           :default => true
-    t.string   "custom_title_type",   :default => "none"
     t.boolean  "draft",               :default => false
     t.boolean  "skip_to_first_child", :default => false
     t.integer  "lft"
     t.integer  "rgt"
     t.integer  "depth"
+    t.string   "view_template"
+    t.string   "layout_template"
   end
 
-  add_index "pages", ["depth"], :name => "index_pages_on_depth"
-  add_index "pages", ["id"], :name => "index_pages_on_id"
-  add_index "pages", ["lft"], :name => "index_pages_on_lft"
-  add_index "pages", ["parent_id"], :name => "index_pages_on_parent_id"
-  add_index "pages", ["rgt"], :name => "index_pages_on_rgt"
+  add_index "refinery_pages", ["depth"], :name => "index_pages_on_depth"
+  add_index "refinery_pages", ["id"], :name => "index_pages_on_id"
+  add_index "refinery_pages", ["lft"], :name => "index_pages_on_lft"
+  add_index "refinery_pages", ["parent_id"], :name => "index_pages_on_parent_id"
+  add_index "refinery_pages", ["rgt"], :name => "index_pages_on_rgt"
 
-  create_table "pages_roles", :id => false, :force => true do |t|
-    t.integer "page_id"
+  create_table "refinery_roles", :force => true do |t|
+    t.string "title"
+  end
+
+  create_table "refinery_roles_users", :id => false, :force => true do |t|
+    t.integer "user_id"
     t.integer "role_id"
   end
+
+  add_index "refinery_roles_users", ["role_id", "user_id"], :name => "index_roles_users_on_role_id_and_user_id"
+  add_index "refinery_roles_users", ["user_id", "role_id"], :name => "index_roles_users_on_user_id_and_role_id"
 
   create_table "refinery_settings", :force => true do |t|
     t.string   "name"
@@ -213,6 +227,39 @@ ActiveRecord::Schema.define(:version => 20111210221939) do
 
   add_index "refinery_settings", ["name"], :name => "index_refinery_settings_on_name"
 
+  create_table "refinery_users", :force => true do |t|
+    t.string   "username",             :null => false
+    t.string   "email",                :null => false
+    t.string   "encrypted_password",   :null => false
+    t.string   "persistence_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "perishable_token"
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.integer  "sign_in_count"
+    t.string   "remember_token"
+    t.string   "reset_password_token"
+    t.datetime "remember_created_at"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "title"
+    t.string   "phone"
+    t.string   "fax"
+    t.string   "website"
+    t.string   "organization"
+    t.string   "street_address"
+    t.string   "city"
+    t.integer  "province"
+    t.string   "postal_code"
+    t.datetime "member_until"
+    t.string   "membership_level"
+  end
+
+  add_index "refinery_users", ["id"], :name => "index_users_on_id"
+
   create_table "resources", :force => true do |t|
     t.string   "file_mime_type"
     t.string   "file_name"
@@ -222,18 +269,6 @@ ActiveRecord::Schema.define(:version => 20111210221939) do
     t.string   "file_uid"
     t.string   "file_ext"
   end
-
-  create_table "roles", :force => true do |t|
-    t.string "title"
-  end
-
-  create_table "roles_users", :id => false, :force => true do |t|
-    t.integer "user_id"
-    t.integer "role_id"
-  end
-
-  add_index "roles_users", ["role_id", "user_id"], :name => "index_roles_users_on_role_id_and_user_id"
-  add_index "roles_users", ["user_id", "role_id"], :name => "index_roles_users_on_user_id_and_role_id"
 
   create_table "seo_meta", :force => true do |t|
     t.integer  "seo_meta_id"
@@ -287,38 +322,5 @@ ActiveRecord::Schema.define(:version => 20111210221939) do
 
   add_index "user_plugins", ["name"], :name => "index_user_plugins_on_title"
   add_index "user_plugins", ["user_id", "name"], :name => "index_unique_user_plugins", :unique => true
-
-  create_table "users", :force => true do |t|
-    t.string   "username",             :null => false
-    t.string   "email",                :null => false
-    t.string   "encrypted_password",   :null => false
-    t.string   "persistence_token"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "perishable_token"
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.integer  "sign_in_count"
-    t.string   "remember_token"
-    t.string   "reset_password_token"
-    t.datetime "remember_created_at"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "title"
-    t.string   "phone"
-    t.string   "fax"
-    t.string   "website"
-    t.string   "organization"
-    t.string   "street_address"
-    t.string   "city"
-    t.integer  "province"
-    t.string   "postal_code"
-    t.datetime "member_until"
-    t.string   "membership_level"
-  end
-
-  add_index "users", ["id"], :name => "index_users_on_id"
 
 end
