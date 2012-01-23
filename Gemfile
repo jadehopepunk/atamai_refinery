@@ -63,7 +63,7 @@ end
 
 # # Specify additional Refinery CMS Engines here (all optional):
 # gem 'refinerycms-inquiries',    '~> 1.0'
-gem 'refinerycms-blog', :git => "git://github.com/resolve/refinerycms-blog.git"
+gem 'refinerycms-blog', :git => "git://github.com/resolve/refinerycms-blog.git", :branch => 'rails-3-1'
 # gem 'refinerycms-search', '~> 0.9.8'
 # # gem "refinerycms-news",         '~> 1.2'
 # # gem 'refinerycms-page-images',  '~> 1.0'
