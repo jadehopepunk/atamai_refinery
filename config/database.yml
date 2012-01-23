@@ -5,9 +5,9 @@ login: &login
   password:
 
 development: &development
-  database: atamai_refinery
+  database: atamai_sales
   <<: *login
 
 test: &test
-  database: atamai_refinery_test
+  database: atamai_sales_test
   <<: *login
