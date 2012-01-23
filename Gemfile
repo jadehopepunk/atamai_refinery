@@ -60,7 +60,7 @@ gem 'refinerycms-search', '~> 0.9.8'
 # gem 'refinerycms-memberships', '1.0', :path => 'vendor/engines'
 
 gem 'refinerycms-calendar', :git => "git://github.com/resolve/refinerycms-calendar.git"
-gem 'refinerycms-page_roles', '0.1', :path => 'vendor/engines'
+# gem 'refinerycms-page_roles', '0.1', :path => 'vendor/engines'
 
 # Add i18n support (optional, you can remove this if you really want to).
 gem 'refinerycms-i18n',         '~> 1.0.0'

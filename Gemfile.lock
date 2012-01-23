@@ -5,12 +5,6 @@ GIT
     refinerycms-calendar (1.1.0)
       refinerycms-core (>= 0.9.9.1)
 
-PATH
-  remote: vendor/engines
-  specs:
-    refinerycms-page_roles (0.1)
-      refinerycms-pages (~> 1.0.8)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -257,7 +251,6 @@ DEPENDENCIES
   refinerycms-calendar!
   refinerycms-i18n (~> 1.0.0)
   refinerycms-inquiries (~> 1.0)
-  refinerycms-page_roles (= 0.1)!
   refinerycms-pages
   refinerycms-search (~> 0.9.8)
   refinerycms-testing (= 1.0.8)
