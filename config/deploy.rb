@@ -1,5 +1,6 @@
-set :application, "atamai_refinery"
+set :application, "atamai_sales"
 set :repository,  "git://github.com/craigambrose/atamai_refinery.git"
+set :branch, 'sales'
 
 set :domain, "refinery.atamai.craigambrose.com"
 role :web, domain
@@ -8,7 +9,7 @@ role :db,  domain, :primary => true
 
 set :scm, :git
 set :rails_env, "production"
-set :deploy_to, "/home/atamai/public_html/atamai_refinery"
+set :deploy_to, "/home/atamai/public_html/#{application}"
 set :user, 'atamai'
 set :use_sudo, false
 set :rake, 'bundle exec rake'
