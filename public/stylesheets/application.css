@@ -37,7 +37,7 @@ h1#body_content_title {
 
 header, footer {
   width: 100%;
-  margin: 0;  
+  margin: 0;
 }
 
 #page_container {
@@ -139,7 +139,8 @@ header, footer {
   border-top: 6px solid #1F2B1B;
   width: 100%;
   background-color: #323E2D; 
-  text-align: right }  
+  text-align: right;
+  color: #CCC }  
 
 section#page {
   width: 100%;
