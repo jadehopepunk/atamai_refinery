@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #323E2D;  
+  background-color: #323C48;  
   font-family: Helvetica, Arial, sans-serif;
   line-height: 140%;
   font-weight: normal; }
@@ -62,7 +62,7 @@ header, footer {
     #page_container > header > .inner .search_box {
       bottom: 0;
       text-align: right;
-      background-color: #1F2B1B; } 
+      background-color: #001334; } 
 
       #page_container > header > .inner .search_box > .inner {
         width: 980px;
@@ -136,10 +136,11 @@ header, footer {
         color: white; }
   
 #page_container > footer {
-  border-top: 6px solid #1F2B1B;
+  border-top: 6px solid #001334;
   width: 100%;
-  background-color: #323E2D; 
-  text-align: right }  
+  background-color: #323C48; 
+  text-align: right;
+  color: #CCC  }  
 
 section#page {
   width: 100%;
