@@ -13,9 +13,8 @@ namespace :sync do
     mysql_params += " -p#{db_config["password"]}" if db_config["password"]
     mysql_params += " #{db_config["database"]}"
 
-    echo_and_run "ssh atamai@#{db_host} \"./dump_atamai_refinery.sh\""
+    echo_and_run "ssh atamai@#{db_host} \"./dump_atamai_sales.sh\""
     echo_and_run "rsync -az --progress atamai@#{db_host}:~/dump.sql ./tmp/production_data.sql"
-    echo_and_run "rsync -az --progress atamai@#{db_host}:~/public_html/atamai_refinery/shared/system/* ./public/system/"
     echo_and_run "mysql #{mysql_params} < ./tmp/production_data.sql"
   end
 end

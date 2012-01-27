@@ -81,6 +81,7 @@ GEM
     globalize3 (0.1.0)
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
+    haml (3.1.4)
     i18n (0.5.0)
     json (1.5.4)
     json_pure (1.5.4)
@@ -237,6 +238,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  haml
   mysql2 (< 0.3)
   rails (= 3.0.10)
   refinerycms (= 1.0.8)

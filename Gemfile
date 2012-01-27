@@ -38,6 +38,7 @@ gem 'rspec-rails'
 
 gem 'refinerycms-pages'
 gem 'refinerycms', '1.0.8'
+gem 'haml'
 
 group :development, :test do
   # To use refinerycms-testing, uncomment it (if it's commented out) and run 'bundle install'
