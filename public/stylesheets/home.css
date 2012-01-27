@@ -12,6 +12,9 @@
 .popover .content p, .popover .content ul, .popover .content ol { margin-bottom: 0; font-size: 13px; line-height: 18px; }
 
 /* HOME PAGE TEASERS */
+.not_implemented { opacity: 0.5; filter: alpha(opacity = 50); zoom: 1; color: black; }
+.village_life { margin: 0 10px; text-align: center; height: 3em; line-height: 3em; margin-bottom: 1em }
+
 .two_columns { margin: 0 10px; overflow: hidden; }
 .two_columns .column { width: 425px; float: left; }
 .two_columns .column:first-child { margin-right: 50px; }
@@ -20,6 +23,7 @@
 .teaser h2 { margin: 3px 0 0.2em 0; color: #333 }
 .teaser p { margin: 0; text-align: justify }
 .teaser a.read_more { white-space: nowrap }
+.teaser_question { margin-bottom: 46px }
 
 .map_teaser img.map { border: 1px solid black; float: right; margin: 5px 0 0 10px }
 .map_teaser .popover { top: 12px }
