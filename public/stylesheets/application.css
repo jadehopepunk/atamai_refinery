@@ -40,6 +40,20 @@ header, footer {
   margin: 0;  
 }
 
+img.illustration {
+  border: 1px solid black;
+}
+
+img.left {
+  float: left;
+  margin: 5px 10px 0 0;
+}
+
+img.right {
+  float: right;
+  margin: 5px 0 0 10px;
+}
+
 #page_container {
   background-image: url(/images/layout/body_outside_background.gif);
   background-repeat: repeat;

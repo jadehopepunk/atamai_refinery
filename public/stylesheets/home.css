@@ -10,14 +10,14 @@
 .popover .title { background-color: #f5f5f5; padding: 9px 15px; line-height: 1; -webkit-border-radius: 3px 3px 0 0; -moz-border-radius: 3px 3px 0 0; border-radius: 3px 3px 0 0; border-bottom: 1px solid #eee; font-size: 18px; color: #404040; margin: 0; }
 .popover .content { background-color: #ffffff; padding: 14px; -webkit-border-radius: 0 0 3px 3px; -moz-border-radius: 0 0 3px 3px; border-radius: 0 0 3px 3px; -webkit-background-clip: padding-box; -moz-background-clip: padding-box; background-clip: padding-box; }
 .popover .content p, .popover .content ul, .popover .content ol { margin-bottom: 0; font-size: 13px; line-height: 18px; }
-.two_columns { width: 100%; overflow: hidden; }
-.two_columns .column { width: 459px; float: left; }
-.two_columns .column:first-child { margin-right: 30px; }
 
 /* HOME PAGE TEASERS */
-.teaser { margin-bottom: 30px; border: 2px dashed #d9c7b9; width: 100%; overflow: hidden }
+.two_columns { margin: 0 10px; overflow: hidden; }
+.two_columns .column { width: 425px; float: left; }
+.two_columns .column:first-child { margin-right: 50px; }
+
+.teaser { margin-bottom: 50px; width: 100%; overflow: hidden }
 .teaser h2 { margin: 3px 0 0.2em 0; color: #333 }
-.teaser img.illustration { border: 1px solid black; float: left; margin: 5px 10px 0 0 }
 .teaser p { margin: 0; text-align: justify }
 .teaser a.read_more { white-space: nowrap }
 
