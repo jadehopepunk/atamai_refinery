@@ -1,3 +1,5 @@
+require "bundler/capistrano"
+
 set :application, "atamai_sales"
 set :repository,  "git://github.com/craigambrose/atamai_refinery.git"
 set :branch, 'sales'
@@ -36,13 +38,6 @@ def link_from_shared_to_current(path, dest_path = path)
 end
 
 after "deploy:update_code", "deploy:bundle_install"
-
-namespace :deploy do
-  desc "run 'bundle install' to install Bundler's packaged gems for the current deploy"
-  task :bundle_install, :roles => :app do
-    run "cd #{release_path} && bundle install --deployment"
-  end
-end
 
 namespace :dragonfly do
   desc "Symlink the Rack::Cache files"
