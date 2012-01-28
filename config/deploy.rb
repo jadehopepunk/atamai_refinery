@@ -37,8 +37,6 @@ def link_from_shared_to_current(path, dest_path = path)
   run "for f in `ls #{src_path}/` ; do ln -nsf #{src_path}/$f #{dst_path}/$f ; done"
 end
 
-after "deploy:update_code", "deploy:bundle_install"
-
 namespace :dragonfly do
   desc "Symlink the Rack::Cache files"
   task :symlink, :roles => [:app] do
