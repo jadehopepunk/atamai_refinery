@@ -24,6 +24,17 @@ class UpgradeToRefineryTwo < ActiveRecord::Migration
 
     # For refinerycms-resources
     rename_table :resources, :refinery_resources
+
+    # For refinerycms-i18n
+    rename_table :page_translations, :refinery_page_translations
+    rename_column :refinery_page_translations, :page_id, :refinery_page_id
+    add_column :refinery_page_translations, :slug, :string
+    add_column :refinery_page_translations, :menu_title, :string
+    add_column :refinery_page_translations, :custom_slug, :string
+    remove_column :refinery_page_translations, :custom_title
+
+    rename_table :page_part_translations, :refinery_page_part_translations
+    rename_column :refinery_page_part_translations, :page_part_id, :refinery_page_part_id
   end
 
   def self.down

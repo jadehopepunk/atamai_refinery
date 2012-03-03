@@ -1,7 +1,9 @@
+/* require_tree . */
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #323E2D;  
+  background-color: #323E2D;
   font-family: Helvetica, Arial, sans-serif;
   line-height: 140%;
   font-weight: normal; }
@@ -13,7 +15,7 @@ a, a:link, a:active, a:visited {
 
 h1 {
   letter-spacing: 1px; }
-  
+
   h1 a, h1 a:link, h1 a:active, h1 a:visited {
     color: black;
     text-decoration: none;
@@ -44,7 +46,7 @@ header, footer {
   background-image: url(/images/layout/body_outside_background.gif);
   background-repeat: repeat;
   background-color: #E7DDD4; }
-  
+
 #page_container > header {
   background-color: #323f2f;
   background-image: url(/images/layout/header_background.gif);
@@ -53,22 +55,22 @@ header, footer {
   padding: 0;
   border-bottom: 2px solid black;
   position: relative }
-  
+
   #page_container > header > .inner {
     background-image: url(/images/layout/header.jpg);
     background-position: top center;
-    background-repeat: no-repeat;}   
+    background-repeat: no-repeat;}
 
     #page_container > header > .inner .search_box {
       bottom: 0;
       text-align: right;
-      background-color: #1F2B1B; } 
+      background-color: #1F2B1B; }
 
       #page_container > header > .inner .search_box > .inner {
         width: 980px;
         margin: 0 auto;
-        padding: 3px 10px } 
-        
+        padding: 3px 10px }
+
       #page_container > header > .inner .search_box input#query {
         background-color: #E7DDD4;
         border: 2px solid black }
@@ -97,20 +99,20 @@ header, footer {
         font-weight: normal;
         font-size: 150%;
       }
-  
+
   #page_container > header #menu {
     display: block;
     margin: 0;
     padding: 0;
     }
-      
+
   #page_container > header #menu ul {
     margin: 0;
     padding: 0;
     width: 1000px;
     margin: 0 auto;
     list-style: none; }
-    
+
     #page_container > header #menu ul li {
       display: block;
       width: 105px;
@@ -134,13 +136,13 @@ header, footer {
         color: white; }
       #page_container > header #menu ul li a, #page_container > header #menu ul li a:hover {
         color: white; }
-  
+
 #page_container > footer {
   border-top: 6px solid #1F2B1B;
   width: 100%;
-  background-color: #323E2D; 
+  background-color: #323E2D;
   text-align: right;
-  color: #CCC }  
+  color: #CCC }
 
 section#page {
   width: 100%;
@@ -149,7 +151,7 @@ section#page {
   background-repeat: repeat-y;
   background-position: top center;
   border-bottom: 2px solid black; }
-  
+
   section#page .section_contents {
     padding: 20px;
     width: 960px;
@@ -158,11 +160,11 @@ section#page {
 
   section#page #body_content {
     min-height: 600px; }
-    
+
     section#page #body_content img {
       border: 1px solid #333;
     }
-  
+
   section#page #body_content_left {
     width: 680px }
 
@@ -184,7 +186,7 @@ section#page {
 
       section#page #body_content_left form .field {
         margin: 12px 0; }
-  
+
   section#page #body_content_right {
     width: 280px;
     clear: right }
@@ -217,7 +219,7 @@ section#page {
       color: white;
       font-weight: bold }
 
-  
+
 #hero {
   clear: both;
   display: block;
@@ -225,17 +227,17 @@ section#page {
   background-image: url(/images/layout/hero_outside_background.gif);
   background-repeat: repeat;
   color: white;
-  font-size: 120%;  
+  font-size: 120%;
   letter-spacing: 0.05em;
-  font-weight: normal; 
+  font-weight: normal;
   line-height: 140%;}
-  
+
   #hero img.illustration {
     float: left;
     border: 2px solid black;
     margin: 0 20px 10px 0;
   }
-  
+
   #hero a, #hero a:link, #hero a:active, #hero a:visited {
     color: #ff9933; }
   #hero .strong1 {
@@ -279,7 +281,7 @@ section#page {
   #blog_posts > article a.community_link {
     float: right; }
   #blog_posts > article header h1 {
-    margin: 0; 
+    margin: 0;
     font-size: 11pt;
     color: #1f2b1b; }
     #blog_posts > article details time.posted_at {

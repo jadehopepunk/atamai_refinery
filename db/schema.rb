@@ -73,27 +73,6 @@ ActiveRecord::Schema.define(:version => 20120302081059) do
     t.datetime "updated_at"
   end
 
-  create_table "page_part_translations", :force => true do |t|
-    t.integer  "page_part_id"
-    t.string   "locale"
-    t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "page_part_translations", ["page_part_id"], :name => "index_page_part_translations_on_page_part_id"
-
-  create_table "page_translations", :force => true do |t|
-    t.integer  "page_id"
-    t.string   "locale"
-    t.string   "custom_title"
-    t.string   "title"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "page_translations", ["page_id"], :name => "index_page_translations_on_page_id"
-
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
     t.string   "image_name"
@@ -106,6 +85,16 @@ ActiveRecord::Schema.define(:version => 20120302081059) do
     t.string   "image_ext"
   end
 
+  create_table "refinery_page_part_translations", :force => true do |t|
+    t.integer  "refinery_page_part_id"
+    t.string   "locale"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "refinery_page_part_translations", ["refinery_page_part_id"], :name => "index_page_part_translations_on_page_part_id"
+
   create_table "refinery_page_parts", :force => true do |t|
     t.integer  "refinery_page_id"
     t.string   "title"
@@ -117,6 +106,19 @@ ActiveRecord::Schema.define(:version => 20120302081059) do
 
   add_index "refinery_page_parts", ["id"], :name => "index_page_parts_on_id"
   add_index "refinery_page_parts", ["refinery_page_id"], :name => "index_page_parts_on_page_id"
+
+  create_table "refinery_page_translations", :force => true do |t|
+    t.integer  "refinery_page_id"
+    t.string   "locale"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "slug"
+    t.string   "menu_title"
+    t.string   "custom_slug"
+  end
+
+  add_index "refinery_page_translations", ["refinery_page_id"], :name => "index_page_translations_on_page_id"
 
   create_table "refinery_pages", :force => true do |t|
     t.integer  "parent_id"
