@@ -126,6 +126,9 @@ GEM
       will_paginate (~> 3.0.2)
     refinerycms-dashboard (2.0.0)
       refinerycms-core (= 2.0.0)
+    refinerycms-i18n (2.0.0)
+      refinerycms-core (~> 2.0.0)
+      routing-filter (>= 0.2.3)
     refinerycms-images (2.0.0)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
@@ -139,6 +142,8 @@ GEM
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
       refinerycms-core (= 2.0.0)
+    routing-filter (0.3.0)
+      actionpack
     rspec (2.8.0)
       rspec-core (~> 2.8.0)
       rspec-expectations (~> 2.8.0)
@@ -181,9 +186,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  coffee-rails (~> 3.2.1)
+  jquery-rails
   mysql2
   rails (= 3.2.1)
-  refinerycms (= 2.0)
-  refinerycms-pages (= 2.0)
+  refinerycms (~> 2.0.0)
+  refinerycms-i18n (~> 2.0.0)
+  routing-filter
   rspec
   rspec-rails
+  sass-rails (~> 3.2.3)
+  uglifier (>= 1.0.3)
