@@ -5,10 +5,12 @@
 </div>
 <%= render(:partial => "/refinery/menu", :locals => {
              :dom_id => 'menu',
-             :css => 'menu'
+             :css => 'menu',
+             :hide_children => true
            }) %>
-<!-- <div class="search_box">
+<div class="search_box">
  <div class="inner">
+   &nbsp;
    <%#= render :partial => '/shared/search' %>
  </div>
-</div> -->
+</div>

@@ -14,9 +14,7 @@
         </div>
       </header>
 
-      <% if current_page?('/') %>
-        <%= render :partial => '/shared/hero' %>
-      <% end %>
+      <%= yield :hero %>
 
       <section id='page'>
         <div class="section_contents">
