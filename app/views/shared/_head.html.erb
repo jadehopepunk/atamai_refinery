@@ -1,0 +1,34 @@
+<head>
+  <meta charset='<%= ::Refinery::Application.config.encoding %>' />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title><%= browser_title(yield(:title)) %></title>
+  <%= raw "<meta name=\"description\" content=\"#{@meta.meta_description}\" />" if @meta.meta_description.present? -%>
+  <%= raw "<meta name=\"keywords\" content=\"#{@meta.meta_keywords}\">" if @meta.meta_keywords.present? -%>
+  <%= csrf_meta_tag if RefinerySetting.find_or_set(:authenticity_token_on_frontend, true)-%>
+  <%= yield :meta %>
+
+  <%= stylesheet_link_tag stylesheets_for_head(stylesheets||=%w(application formatting theme), theme ||= nil),
+                          :cache => ("cache/application" if Rails.root.writable? and
+                                                            RefinerySetting.find_or_set(:use_resource_caching, true) and
+                                                            request.env['HTTP_USER_AGENT'] !~ /MSIE/ and (theme ||= nil).blank?) %>
+  <%= stylesheet_link_tag "home", :theme => theme if home_page? %>
+
+  <%= yield :stylesheets %>
+  <%- unless local_request? %>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-16044561-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  <%- end %>
+
+  <%= javascript_include_tag 'modernizr-min' %>
+</head>
