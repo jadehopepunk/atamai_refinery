@@ -11,3 +11,8 @@ development: &development
 test: &test
   database: atamai_refinery_test
   <<: *login
+ 
+production:
+  <<: *login
+  database: atamai_refinery
+ 

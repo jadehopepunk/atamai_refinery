@@ -23,6 +23,7 @@ end
 group :development, :test do
   gem 'rspec'
   gem 'rspec-rails'
+  gem 'capistrano'
 end
 
 # Refinery CMS
