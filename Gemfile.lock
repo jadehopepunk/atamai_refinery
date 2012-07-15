@@ -1,16 +1,17 @@
 GIT
+  remote: https://github.com/craigambrose/refinerycms-atamai_theme.git
+  revision: 9515021db5f3849ed6cf974ec21317bae26cbdd4
+  specs:
+    refinerycms-atamai_theme (1.0)
+      refinerycms-core (~> 2.0.5)
+
+GIT
   remote: https://github.com/resolve/refinerycms-search.git
   revision: 004f63b0d9b0f833a3cbb35fc08086921882af17
   branch: 2-0-stable
   specs:
     refinerycms-search (2.0.0)
       refinerycms-core (~> 2.0.4)
-
-PATH
-  remote: ../atamai_development/vendor/extensions
-  specs:
-    refinerycms-atamai_theme (1.0)
-      refinerycms-core (~> 2.0.5)
 
 GEM
   remote: http://rubygems.org/
