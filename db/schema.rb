@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120302081059) do
+ActiveRecord::Schema.define(:version => 20120715070130) do
 
   create_table "blog_categories", :force => true do |t|
     t.string   "title"
@@ -53,18 +53,6 @@ ActiveRecord::Schema.define(:version => 20120302081059) do
 
   add_index "blog_posts", ["id"], :name => "index_blog_posts_on_id"
 
-  create_table "inquiries", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "phone"
-    t.text     "message"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "spam",       :default => false
-  end
-
-  add_index "inquiries", ["id"], :name => "index_inquiries_on_id"
-
   create_table "inquiry_settings", :force => true do |t|
     t.string   "name"
     t.text     "value"
@@ -72,6 +60,28 @@ ActiveRecord::Schema.define(:version => 20120302081059) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "refinery_image_page_translations", :force => true do |t|
+    t.integer  "refinery_image_page_id"
+    t.string   "locale"
+    t.text     "caption"
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
+  end
+
+  add_index "refinery_image_page_translations", ["locale"], :name => "index_refinery_image_page_translations_on_locale"
+  add_index "refinery_image_page_translations", ["refinery_image_page_id"], :name => "index_186c9a170a0ab319c675aa80880ce155d8f47244"
+
+  create_table "refinery_image_pages", :force => true do |t|
+    t.integer "image_id"
+    t.integer "page_id"
+    t.integer "position"
+    t.text    "caption"
+    t.string  "page_type", :default => "page"
+  end
+
+  add_index "refinery_image_pages", ["image_id"], :name => "index_refinery_image_pages_on_image_id"
+  add_index "refinery_image_pages", ["page_id"], :name => "index_refinery_image_pages_on_page_id"
 
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
@@ -84,6 +94,18 @@ ActiveRecord::Schema.define(:version => 20120302081059) do
     t.string   "image_uid"
     t.string   "image_ext"
   end
+
+  create_table "refinery_inquiries_inquiries", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "spam",       :default => false
+  end
+
+  add_index "refinery_inquiries_inquiries", ["id"], :name => "index_inquiries_on_id"
 
   create_table "refinery_page_part_translations", :force => true do |t|
     t.integer  "refinery_page_part_id"
