@@ -46,6 +46,16 @@
     padding-left: 223px;
     background: transparent url(/assets/oil_sunset.jpg) no-repeat 0px 10px;
   }
+  
+  .teasers {
+    background-color: #e7ddd4;
+    padding: 20px;
+    border: 1px solid #877168;
+    $radius: 10px;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+  }
 
   .teaser {
     h2 { margin: 3px 0 0.4em 0; color: #001334 }
@@ -60,7 +70,9 @@
        border-radius: $radius;
     }
 
-    margin-bottom: 50px; width: 100%; overflow: hidden
+    margin-bottom: 1em;
+    width: 100%; 
+    overflow: hidden
   }
   .teaser_question { 
     margin-bottom: 46px;
