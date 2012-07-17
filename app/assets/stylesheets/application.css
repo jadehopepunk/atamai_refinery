@@ -11,4 +11,6 @@
  *= require_self
  *= require atamai
  *= require colours
+ *= require avc_layout
+ *= require home
 */

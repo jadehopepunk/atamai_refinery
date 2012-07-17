@@ -1,0 +1,22 @@
+a#sales_website {
+  background-color: #323c48;
+  color: white;
+  display: block;
+  border-bottom: 2px solid black;
+  text-decoration: none;
+  
+  span {
+    display: block;
+  }
+  
+  .fixed_inner {
+    padding-top: 6px;
+    padding-bottom: 5px;
+    text-align: center;
+    font-size: 14pt;
+  }
+  
+  &:hover {
+    background-color: #67778e;
+  }
+}
