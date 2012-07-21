@@ -2,57 +2,22 @@
   = render :partial => '/shared/hero'
 
 #home
-  .two_columns
-    .column
-      .teasers
-        .teaser
-          %h2 Living with Commons
-          %p 
-            Our individual properties lie within a larger area of land which we own in common. Owning commons gives us
-            a great degree of control over our watershed and food production systems. Projects which would normally be
-            too large for individuals can now be tackled as a community, and we can use our commons to support thriving
-            individual businesses within the village.
+  = render '/refinery/content_page'
 
-        .teaser
-          %h2 A Democratic Community
-          %p
-            Atamai Village strives to use a Consensus based decision making process for all it's major decisions. It's
-            true that this is more work that simply voting, or electing an emperor of the village, but the payoff
-            is that it doesn't leave minority viewpoints or individual villagers feeling bullied by the will of majority.
-            Atamai Village Council provides consensus and facilitation training, as well as conflict transformation
-            and community building activities.
-
-        .teaser
-          %h2 Resilient Neighbours
-          %p 
-            Living in a village with others who are trying to build a community that is secure in the supply of it's
-            basic needs means not having to go it alone as a self-sufficient homesteader. We draw encouragement from
-            each other in our efforts to be more resilient, and know that mutual support with other villagers is one
-            of our greatest assets in any time of need.
-
-        .teaser
-          %h2 Economics & Livelhoods
-          %p 
-            We aren't a commune, but we do have a policy of attempting to use goods and services from other villagers
-            first if possible. Our focus on creating a strong village economy means that we have a range of opportunies
-            for new businesses within the village, and sometimes jobs available within existing ones.
-          
-        .teaser
-          %h2 Long-Term Sustainability
-          %p 
-            To live in balance with our environment, we have to think long-term. We think that the word "sustainability"
-            needs to be taken very literally. The only way that human settlement truly be "sustained" for centuries, or even
-            millenia is if we can live within the planets ecological limits.
-
-    .column
-    
-      %h2 Updates
-      
-      %p
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut mi nulla. Vestibulum nunc tortor, pretium ut consectetur eu, ultrices quis ante. Nam lacus risus, blandit eget dignissim vel, malesuada non odio. Curabitur eu leo et metus ornare facilisis ac egestas arcu. Sed facilisis leo mauris, a blandit turpis. Mauris nunc dui, porta nec suscipit quis, imperdiet non neque. Pellentesque sit amet mollis turpis. Quisque ac tortor vitae magna hendrerit iaculis. Sed id nibh mauris, in placerat ipsum. Donec luctus ornare neque. Vivamus massa elit, porta consequat accumsan sit amet, ultricies vel est. Aliquam semper, augue sed feugiat accumsan, nulla enim tristique massa, vel tempor diam tortor vel sem. Aliquam ullamcorper nisl ut quam posuere vitae placerat augue molestie. Donec ultrices turpis eget orci iaculis in venenatis metus faucibus. Sed aliquet mauris eget augue aliquet posuere.
-
-      %p
-        Aenean tincidunt, ligula non tristique eleifend, nulla dui euismod lorem, et tincidunt turpis lacus sed erat. Nam blandit dictum lorem eget molestie. Proin at metus rutrum odio faucibus iaculis ac non ipsum. Quisque nibh dui, iaculis nec aliquet in, pharetra id urna. Cras posuere vestibulum urna, in bibendum elit iaculis non. Suspendisse porta est id metus sagittis fringilla. Aliquam ultricies odio id lectus lacinia quis gravida elit auctor. Ut elementum enim nec nisl pellentesque laoreet. Cras ullamcorper nunc eu urna pharetra malesuada. Sed interdum scelerisque ipsum, a volutpat sapien vulputate vel. Ut auctor dapibus libero nec tincidunt. Curabitur lacinia aliquam libero. Morbi porta velit ipsum, sit amet lobortis odio.
+  / .two_columns
+  /   .column
+  /     .teasers
+  /       = @page.body
+  / 
+  /   .column
+  /   
+  /     %h2 Updates
+  /     
+  /     %p
+  /       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut mi nulla. Vestibulum nunc tortor, pretium ut consectetur eu, ultrices quis ante. Nam lacus risus, blandit eget dignissim vel, malesuada non odio. Curabitur eu leo et metus ornare facilisis ac egestas arcu. Sed facilisis leo mauris, a blandit turpis. Mauris nunc dui, porta nec suscipit quis, imperdiet non neque. Pellentesque sit amet mollis turpis. Quisque ac tortor vitae magna hendrerit iaculis. Sed id nibh mauris, in placerat ipsum. Donec luctus ornare neque. Vivamus massa elit, porta consequat accumsan sit amet, ultricies vel est. Aliquam semper, augue sed feugiat accumsan, nulla enim tristique massa, vel tempor diam tortor vel sem. Aliquam ullamcorper nisl ut quam posuere vitae placerat augue molestie. Donec ultrices turpis eget orci iaculis in venenatis metus faucibus. Sed aliquet mauris eget augue aliquet posuere.
+  / 
+  /     %p
+  /       Aenean tincidunt, ligula non tristique eleifend, nulla dui euismod lorem, et tincidunt turpis lacus sed erat. Nam blandit dictum lorem eget molestie. Proin at metus rutrum odio faucibus iaculis ac non ipsum. Quisque nibh dui, iaculis nec aliquet in, pharetra id urna. Cras posuere vestibulum urna, in bibendum elit iaculis non. Suspendisse porta est id metus sagittis fringilla. Aliquam ultricies odio id lectus lacinia quis gravida elit auctor. Ut elementum enim nec nisl pellentesque laoreet. Cras ullamcorper nunc eu urna pharetra malesuada. Sed interdum scelerisque ipsum, a volutpat sapien vulputate vel. Ut auctor dapibus libero nec tincidunt. Curabitur lacinia aliquam libero. Morbi porta velit ipsum, sit amet lobortis odio.
           
   / .one_column
   /   .overall
