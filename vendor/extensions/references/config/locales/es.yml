@@ -1,0 +1,30 @@
+es:
+  refinery:
+    plugins:
+      references:
+        title: References
+#        article: masculino/femenino
+    references:
+      admin:
+        references:
+          actions:
+            create_new: Crear nuevo reference
+            reorder: Reordenar references
+            reorder_done: Reordenación de references completada
+          records:
+            title: References
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay references todavía. Pulsa en "Crear nuevo Reference" para crear tu primer reference.
+          reference:
+            view_live_html: Ver este reference como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este reference
+            delete: Borrar este reference para siempre
+      references:
+        show:
+          other: Otros references
+  activerecord:
+    attributes:
+      'refinery/references/reference':
+        title: Title
+        url: Url
+        body: Body

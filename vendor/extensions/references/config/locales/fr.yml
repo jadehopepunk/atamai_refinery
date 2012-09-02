@@ -1,0 +1,29 @@
+fr:
+  refinery:
+    plugins:
+      references:
+        title: References
+    references:
+      admin:
+        references:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Reference
+            reorder: Réordonner les References
+            reorder_done: Fin de réordonnancement des References
+          records:
+            title: References
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Reference. Cliquer sur "Créer un(e) nouve(au/l/lle) Reference" pour créer votre premi(er/ère) reference.'
+          reference:
+            view_live_html: Voir ce(t/tte) reference <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) reference
+            delete: Supprimer définitivement ce(t/tte) reference
+      references:
+        show:
+          other: Autres References
+  activerecord:
+    attributes:
+      'refinery/references/reference':
+        title: Title
+        url: Url
+        body: Body

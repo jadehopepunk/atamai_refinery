@@ -1,0 +1,29 @@
+nb:
+  refinery:
+    plugins:
+      references:
+        title: References
+    references:
+      admin:
+        references:
+          actions:
+            create_new: Lag en ny Reference
+            reorder: Endre rekkefølgen på References
+            reorder_done: Ferdig å endre rekkefølgen References
+          records:
+            title: References
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen References enda. Klikk på "Lag en ny Reference" for å legge til din første reference.
+          reference:
+            view_live_html: Vis hvordan denne reference ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne reference
+            delete: Fjern denne reference permanent
+      references:
+        show:
+          other: Andre References
+  activerecord:
+    attributes:
+      'refinery/references/reference':
+        title: Title
+        url: Url
+        body: Body

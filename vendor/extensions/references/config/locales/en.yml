@@ -1,0 +1,29 @@
+en:
+  refinery:
+    plugins:
+      references:
+        title: References
+    references:
+      admin:
+        references:
+          actions:
+            create_new: Add New Reference
+            reorder: Reorder References
+            reorder_done: Done Reordering References
+          records:
+            title: References
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no References yet. Click "Add New Reference" to add your first reference.
+          reference:
+            view_live_html: View this reference live <br/><em>(opens in a new window)</em>
+            edit: Edit this reference
+            delete: Remove this reference forever
+      references:
+        show:
+          other: Other References
+  activerecord:
+    attributes:
+      'refinery/references/reference':
+        title: Title
+        url: Url
+        body: Body

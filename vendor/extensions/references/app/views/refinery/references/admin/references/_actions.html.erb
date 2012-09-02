@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::References::Admin::ReferencesController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.references_admin_references_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_references_admin_reference_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::References::Admin::ReferencesController.sortable? && ::Refinery::References::Reference.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "References"),
+                 refinery.references_admin_references_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "References"),
+                 refinery.references_admin_references_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="references">
+    <% @references.each do |reference| %>
+      <li>
+        <%= link_to reference.title, refinery.references_reference_path(reference) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

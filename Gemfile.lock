@@ -26,6 +26,13 @@ GIT
     refinerycms-search (2.0.0)
       refinerycms-core (~> 2.0.4)
 
+PATH
+  remote: vendor/extensions
+  specs:
+    refinerycms-references (1.0)
+      refinerycms-core (~> 2.0.5)
+      refinerycms-formtastic (~> 1.0.2)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -90,6 +97,8 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     filters_spam (0.3)
+    formtastic (2.2.1)
+      actionpack (>= 3.0)
     friendly_id (4.0.7)
     globalize3 (0.2.0)
       activemodel (>= 3.0.0)
@@ -181,6 +190,9 @@ GEM
       will_paginate (~> 3.0.2)
     refinerycms-dashboard (2.0.5)
       refinerycms-core (= 2.0.5)
+    refinerycms-formtastic (1.0.2)
+      formtastic (~> 2.2.1)
+      refinerycms-core (~> 2.0.5)
     refinerycms-i18n (2.0.0)
       refinerycms-core (~> 2.0.0)
       routing-filter (>= 0.2.3)
@@ -261,6 +273,7 @@ DEPENDENCIES
   refinerycms-i18n (~> 2.0.0)
   refinerycms-inquiries (~> 2.0.0)
   refinerycms-page-images (~> 2.0.0)
+  refinerycms-references!
   refinerycms-search (~> 2.0.0)!
   rspec
   rspec-rails

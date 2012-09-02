@@ -1,0 +1,24 @@
+<%= semantic_form_for [refinery, :references_admin, @reference] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @reference,
+              :include_object_name => true %>
+
+  <%= f.inputs do %>
+    <%= f.input :title, :input_html => {:class => 'larger widest'} %>
+    <%= f.input :url, :input_html => {:class => 'wide'} %>
+  <% end %>  
+
+  <%= tabbed_fieldsets f, [:body] %>
+    
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.references.admin.references.reference'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @reference.title) %>
+<% end -%>
+<% content_for :javascripts do %>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end %>

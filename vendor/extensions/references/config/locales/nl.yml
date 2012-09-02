@@ -1,0 +1,29 @@
+nl:
+  refinery:
+    plugins:
+      references:
+        title: References
+    references:
+      admin:
+        references:
+          actions:
+            create_new: Maak een nieuwe Reference
+            reorder: Wijzig de volgorde van de References
+            reorder_done: Klaar met het wijzingen van de volgorde van de References
+          records:
+            title: References
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen References. Druk op 'Maak een nieuwe Reference' om de eerste aan te maken.
+          reference:
+            view_live_html: Bekijk deze reference op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze reference
+            delete: Verwijder deze reference voor eeuwig
+      references:
+        show:
+          other: Andere References
+  activerecord:
+    attributes:
+      'refinery/references/reference':
+        title: Title
+        url: Url
+        body: Body
