@@ -1,0 +1,5 @@
+%section#records
+  = render 'records'
+%aside#actions
+  = render 'actions'
+= render '/refinery/admin/make_sortable', :tree => false if !searching? and ::Refinery::References::Admin::ReferencesController.sortable? and ::Refinery::References::Reference.count > 1
