@@ -1,3 +1,3 @@
-excludeInFileChooser = "{$excludeInFileChooser,log,tmp,doc,uploads,*.sublime-*,vendor\\/cache}"
-excludeInBrowser = "{$excludeInBrowser,log,tmp,doc,uploads,*.sublime-*,vendor\\/cache}"
-excludeInFolderSearch = "{$excludeInFolderSearch,log,tmp,doc,uploads,*.sublime-*,private,vendor\\/cache}"%   
+excludeInFileChooser = "{$excludeInFileChooser,log,tmp,doc,uploads,*.sublime-*,vendor\\/cache,assets\\/images}"
+excludeInBrowser = "{$excludeInBrowser,log,tmp,doc,uploads,*.sublime-*,vendor\\/cache,assets\\/images}"
+excludeInFolderSearch = "{$excludeInFolderSearch,log,tmp,doc,uploads,*.sublime-*,private,vendor\\/cache,assets\\/images}"%   

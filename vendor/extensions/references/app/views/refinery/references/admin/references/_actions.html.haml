@@ -2,6 +2,7 @@
   - if ::Refinery::References::Admin::ReferencesController.searchable?
     %li= render '/refinery/admin/search', :url => refinery.references_admin_references_path
   %li= link_to t('.create_new'), refinery.new_references_admin_reference_path, :class => "add_icon"
+  %li= link_to t('.manage_categories'), refinery.references_admin_categories_path, :class => 'folder_edit_icon'
 
   - if !searching? && ::Refinery::References::Admin::ReferencesController.sortable? && ::Refinery::References::Reference.any?
     %li
