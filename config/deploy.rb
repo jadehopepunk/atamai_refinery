@@ -1,19 +1,20 @@
 require "bundler/capistrano"
 
-set :application, "atamai_refinery"
+set :application, "avc"
 set :repository,  "https://github.com/craigambrose/atamai_refinery.git"
 
-set :domain, "atamai.org.nz"
+set :domain, "tt.craigambrose.com"
 role :web, domain
 role :app, domain
 role :db,  domain, :primary => true
 
 set :scm, :git
 set :rails_env, "production"
-set :deploy_to, "/home/rails/atamai_refinery/production"
-set :user, 'rails'
+set :user, 'atamai'
+set :deploy_to, "/home/#{user}/#{application}/production"
 set :use_sudo, false
 set :rake, 'bundle exec rake'
+set :deploy_via, :remote_cache
 
 namespace :deploy do
   task :start do ; end
