@@ -204,6 +204,8 @@ GEM
       filters_spam (~> 0.2)
       refinerycms-core (~> 2.0.1)
       refinerycms-settings (~> 2.0.1)
+    refinerycms-jquery_gallery (1.0.1)
+      refinerycms-core (~> 2.0.5)
     refinerycms-page-images (2.0.1)
       refinerycms-pages (~> 2.0.0)
     refinerycms-pages (2.0.5)
@@ -275,6 +277,7 @@ DEPENDENCIES
   refinerycms-blog (~> 2.0.0)!
   refinerycms-i18n (~> 2.0.0)
   refinerycms-inquiries (~> 2.0.0)
+  refinerycms-jquery_gallery
   refinerycms-page-images (~> 2.0.0)
   refinerycms-references!
   refinerycms-search (~> 2.0.0)!
