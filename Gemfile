@@ -28,7 +28,7 @@ group :development, :test do
 end
 
 # Refinery CMS
-gem 'refinerycms', '2.0.5'
+gem 'refinerycms', '2.0.7'
 
 # Specify additional Refinery CMS Extensions here (all optional):
 gem 'refinerycms-i18n',   '~> 2.0.0'
