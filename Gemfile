@@ -1,6 +1,6 @@
 source :rubygems
 
-gem 'rails', '3.2.3'
+gem 'rails', '3.2.4'
 gem 'haml-rails'
 gem 'jquery-rails'
 
