@@ -1,9 +1,51 @@
-- content_for(:hero) do
-  = render :partial => '/shared/hero'
+/ - content_for(:hero) do
+/   = render :partial => '/shared/hero'
 
 #home
-  = render '/refinery/content_page'
+  .centered_scrollable
+    %section
+      %h1 Living at Atamai
 
+      %p.blurb
+        It's our vision to live, play and work in a sustainable settlement that is connected to the wider local 
+        community but provides many of the things that really matter itself, such as food, energy, water and
+        meaningful livelihoods.
+
+      .image-box.three-images
+        = image_tag 'illustrations/compost.jpg', :size => '300x200'
+        = image_tag 'illustrations/compost_lunch.jpg', :size => '300x200'
+        = image_tag 'illustrations/pond_jetty.jpg', :size => '300x200'
+
+    %section
+      %h1 Let us show you around
+
+      %p.blurb
+        When completed we expect our village to have homesteads and market gardens, orchards and forests, townhouses,
+        business, community facilities, workshops, bike trails and much much more. Take a tour through our vision
+        of a completed Atamai Village, or visit the Development Project Website to see what has already been created.
+
+      .image-box
+        = image_tag 'illustrations/village_center_painting.jpg'
+
+    %section
+      %h1 Building a village economy
+
+      %p.blurb
+        We aren't a commune, we're a village of privately owned homes and business which works together to create
+        an internal economy we can rely on. We buy from each other where possible, or locally where not. Our policy
+        of trying to keep work in the village means that we have unique opportunities for profesionals in a range
+        of areas to work for a fair living and create real local value, regardless of what the outside economy does.
+
+    %section
+      %h1 Human community and mutual support
+
+      %p.blurb
+        We live together, and support each other, but we don't have a common faith or ideology, except for the desire
+        to live in a way that is within the ability of the planet to support. We value diversity and difference, and we
+        try and balance both our public and private spaces to give everyone the support and care they need from a 
+        community with the time and space they need to be themselves.
+
+  / = render '/refinery/content_page'
   / .two_columns
   /   .column
   /     .teasers

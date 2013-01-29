@@ -38,15 +38,66 @@ section#page {
     .not_implemented { opacity: 0.5; filter: alpha(opacity = 50); zoom: 1; color: black; }
     .village_life { margin: 0 10px; text-align: center; height: 3em; line-height: 3em; margin-bottom: 1em }
 
+    $rythm: 20px;
+    $line-height: 1.5em;    
+    $h1-height: 2.369em;
+
+    .centered_scrollable {
+      margin-top: 1em;
+      font-size: $rythm;
+      line-height: 1.5em;
+
+      h1 { 
+        font-size: $h1-height;
+        line-height: 0.63318em;
+        margin: 0 0 0.63318em 0;
+        text-align: center;
+      }
+      section {
+        margin: 0;
+        padding: 0;
+        margin-bottom: $line-height;
+
+        p.blurb {
+          font-size: 1em;
+          line-height: $line-height;
+          margin: 0 0 $line-height 0;
+          text-align: center;
+        }
+      }
+
+      .image-box {
+        width: 100%;
+        text-align: center;
+        margin-bottom: $line-height;
+
+        img {
+          border: 1px solid black;
+          margin: 0;
+          margin-left: 0px;
+          padding: 0;
+          display: inline;
+        }
+        img:first-child{
+          margin-left: 0;
+        };
+      }
+
+      .three-images {
+        height: 210px;        
+      }
+    }
+
     .two_columns {
       .column { width: 445px; float: left; }
       .column:first-child { margin-right: 50px; }
       margin: 0 10px; overflow: hidden;
+      .main_column { width: 700px; }
     }
     .one_column {
       margin: 0 10px;
     }
-  
+
     .rationale {
       font-size: 120%;
       line-height: 150%;
