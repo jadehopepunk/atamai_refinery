@@ -3,7 +3,7 @@ require "bundler/capistrano"
 set :application, "avc"
 set :repository,  "https://github.com/craigambrose/atamai_refinery.git"
 
-set :domain, "tt.craigambrose.com"
+set :domain, "atamaivillage.com"
 role :web, domain
 role :app, domain
 role :db,  domain, :primary => true
