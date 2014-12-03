@@ -143,6 +143,15 @@ img {
         display: block;
         margin: 0;
         padding: 0;
+
+        &:after {
+          clear: both;
+          content: ".";
+          display: block;
+          height: 0;
+          visibility: hidden;
+        }
+
         ul {
           margin: 0;
           padding: 0;
