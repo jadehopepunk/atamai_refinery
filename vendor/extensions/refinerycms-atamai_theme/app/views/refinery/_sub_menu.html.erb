@@ -3,11 +3,12 @@
   <div id="submenu_container">
     <%= link_to(root.menu_title.blank? ? root.title : root.menu_title, "/#{root.slug}", :class => 'parent') if root %>
 
-    <%- presenter = Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self) %>
-    <%- presenter.roots = [root] %>
-    <%- presenter.css = 'menu' %>
-    <%- presenter.dom_id = 'submenu' %>
+    <%- pages = Refinery::Page.fast_menu.reject {|page| page == root || page.root != root} %>
+    <%- menu = Refinery::Menu.new pages %>
+    <%- presenter = Refinery::Pages::MenuPresenter.new(menu, self) %>
+    <%- presenter.config.css = 'menu' %>
+    <%- presenter.config.dom_id = 'submenu' %>
     <%= presenter.to_html %>
-
+<% Refinery::Page %>
   </div>
 <%- end %>
