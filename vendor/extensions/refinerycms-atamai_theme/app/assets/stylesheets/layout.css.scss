@@ -1,3 +1,12 @@
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 iframe.map {
  border: 2px solid black;
  margin: 1em auto;
@@ -211,6 +220,7 @@ section#page {
     width: 960px;
     margin: 0 auto; }
   #body_content {
+    @include clearfix();
     min-height: 600px;
     img {
       border: 2px solid #333; } }

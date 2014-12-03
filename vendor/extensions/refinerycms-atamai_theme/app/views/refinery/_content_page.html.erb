@@ -1,4 +1,4 @@
-<%= render(:partial => "/refinery/sub_menu") if @page && !@page.home? && (local_assigns[:hide_sections].nil? || !local_assigns[:hide_sections].include?('submenu')) %>
+<%= render(:partial => "/refinery/sub_menu") if @page && @page.path != '/' && (local_assigns[:hide_sections].nil? || !local_assigns[:hide_sections].include?('submenu')) %>
 
 <%= render_content_page(@page, {
       :hide_sections => local_assigns[:hide_sections],

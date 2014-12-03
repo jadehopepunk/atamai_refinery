@@ -29,6 +29,8 @@ group :development, :test do
   gem 'capistrano'
 end
 
+gem 'acts-as-taggable-on'
+
 # Refinery CMS
 gem 'refinerycms', '2.1.0'
 

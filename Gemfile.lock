@@ -263,6 +263,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts-as-taggable-on
   capistrano
   coffee-rails (~> 3.2.1)
   haml-rails
