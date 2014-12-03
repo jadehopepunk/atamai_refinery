@@ -32,13 +32,13 @@ end
 gem 'acts-as-taggable-on'
 
 # Refinery CMS
-gem 'refinerycms', '2.1.0'
+gem 'refinerycms', '~> 2.1.0'
 
 # Specify additional Refinery CMS Extensions here (all optional):
-gem 'refinerycms-i18n',   '2.1.0'
-gem 'refinerycms-search', '2.1.0'
-gem 'refinerycms-inquiries', '2.1.0'
-gem 'refinerycms-blog', '2.1.0'
-gem 'refinerycms-page-images', '2.1.0'
+gem 'refinerycms-i18n',   '~> 2.1.0'
+gem 'refinerycms-search', '~> 2.1.0'
+gem 'refinerycms-inquiries', '~> 2.1.0'
+gem 'refinerycms-blog', '~> 2.1.0'
+gem 'refinerycms-page-images', '~> 2.1.0'
 gem 'refinerycms-atamai_theme', path: 'vendor/extensions'
-gem 'refinerycms-jquery_gallery', '2.1.0', git: 'https://github.com/craigambrose/refinerycms-jquery_gallery.git'
+gem 'refinerycms-jquery_gallery', '~> 2.1.0', git: 'https://github.com/craigambrose/refinerycms-jquery_gallery.git'
