@@ -26,7 +26,7 @@ end
 group :development, :test do
   gem 'rspec'
   gem 'rspec-rails'
-  gem 'capistrano'
+  gem 'capistrano', '~> 2.15.5'
 end
 
 gem 'acts-as-taggable-on'
