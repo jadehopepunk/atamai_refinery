@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141203012402) do
+ActiveRecord::Schema.define(:version => 20141203020725) do
 
   create_table "blog_categories", :force => true do |t|
     t.string   "title"
@@ -307,7 +307,6 @@ ActiveRecord::Schema.define(:version => 20141203012402) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_uid"
-    t.string   "image_ext"
   end
 
   create_table "refinery_inquiries_inquiries", :force => true do |t|
@@ -433,6 +432,7 @@ ActiveRecord::Schema.define(:version => 20141203012402) do
     t.boolean  "restricted",              :default => false
     t.string   "callback_proc_as_string"
     t.string   "form_value_type"
+    t.string   "slug"
   end
 
   add_index "refinery_settings", ["name"], :name => "index_refinery_settings_on_name"
@@ -460,9 +460,11 @@ ActiveRecord::Schema.define(:version => 20141203012402) do
     t.string   "reset_password_token"
     t.datetime "remember_created_at"
     t.datetime "reset_password_sent_at"
+    t.string   "slug"
   end
 
   add_index "refinery_users", ["id"], :name => "index_users_on_id"
+  add_index "refinery_users", ["slug"], :name => "index_refinery_users_on_slug"
 
   create_table "resources", :force => true do |t|
     t.string   "file_mime_type"
