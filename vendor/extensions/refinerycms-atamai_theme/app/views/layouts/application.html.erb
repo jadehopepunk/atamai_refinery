@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<%= render '/refinery/html_tag' %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <%= render '/refinery/head' %>
+  <body>
+    <%= site_bar -%>
+    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+    <div id="page_container">
+      <header id="header">
+        <div class="inner">
+          <div class="inner2">
+            <%= render '/refinery/header' -%>
+          </div>
+        </div>
+      </header>
+
+      <%- if content_for? :hero %>
+        <section id='hero'>
+          <div class='inner'><div class='inner2'><div class='inner3'><div class="fixed"><div class="fixed_inner">
+            <%= yield :hero %>
+          </div></div></div></div></div>
+        </section>
+      <% end %>
+
+      <section id="page">
+        <div class="section_contents">
+          <%= yield %>
+        </div>
+      </section>
+
+      <footer>
+        <div class="inner">
+          <div class="fixed">
+            <div class="fixed_inner">
+              <%= render '/refinery/footer' -%>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <%= render '/refinery/javascripts' %>
+  </body>
+</html>

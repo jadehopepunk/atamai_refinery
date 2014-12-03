@@ -30,15 +30,13 @@ group :development, :test do
 end
 
 # Refinery CMS
-gem 'refinerycms', '~> 2.0.0'
+gem 'refinerycms', '2.1.0'
 
 # Specify additional Refinery CMS Extensions here (all optional):
-gem 'refinerycms-i18n',   '~> 2.0.0'
-gem 'refinerycms-search', '~> 2.0.0', :git => 'https://github.com/resolve/refinerycms-search.git', :branch => '2-0-stable'
-gem 'refinerycms-inquiries', '~> 2.0.0'
-gem 'refinerycms-blog', '~> 2.0.0', :git => 'https://github.com/resolve/refinerycms-blog.git', :branch => '2-0-stable'
-gem 'refinerycms-page-images', '~> 2.0.0'
-gem 'refinerycms-atamai_theme', :git => 'https://github.com/craigambrose/refinerycms-atamai_theme.git'
-# gem 'refinerycms-atamai_theme', :path => '/Users/craig/development/refinery_extensions/refinerycms-atamai_theme'
-gem 'refinerycms-references', :path => 'vendor/extensions'
-gem 'refinerycms-jquery_gallery'
+gem 'refinerycms-i18n',   '2.1.0'
+gem 'refinerycms-search', '2.1.0'
+gem 'refinerycms-inquiries', '2.1.0'
+gem 'refinerycms-blog', '2.1.0'
+gem 'refinerycms-page-images', '2.1.0'
+gem 'refinerycms-atamai_theme', path: 'vendor/extensions'
+gem 'refinerycms-jquery_gallery', '2.1.0', git: 'https://github.com/craigambrose/refinerycms-jquery_gallery.git'

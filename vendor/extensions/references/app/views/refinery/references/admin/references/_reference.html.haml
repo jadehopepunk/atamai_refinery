@@ -1,7 +1,0 @@
-%li{:class => "clearfix record #{cycle('on', 'on-hover')}" :id => dom_id(reference)}
-  %span.title= reference.title
-
-  %span.actions    
-    = link_to refinery_icon_tag("application_go.png"), refinery.references_reference_path(reference), :title => t('.view_live_html'), :target => "_blank"
-    = link_to refinery_icon_tag("application_edit.png"), refinery.edit_references_admin_reference_path(reference), :title => t('.edit')
-    = link_to refinery_icon_tag("delete.png"), refinery.references_admin_reference_path(reference), :class => "cancel confirm-delete", :title => t('.delete'), :confirm => t('message', :scope => 'refinery.admin.delete', :title => reference.title), :method => :delete

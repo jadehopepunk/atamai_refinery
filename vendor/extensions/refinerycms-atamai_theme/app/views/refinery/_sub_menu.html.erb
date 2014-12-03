@@ -1,0 +1,11 @@
+<div id="submenu_container">
+  <%- root = @page.root %>
+  <%= link_to(root.menu_title.blank? ? root.title : root.menu_title, "/#{root.slug}", :class => 'parent') if root %>
+
+  <%= render :partial => '/refinery/menu',
+    :locals => {
+    :dom_id => 'submenu',
+    :css => 'menu',
+    :roots => refinery_menu_pages.reject{|p| p.parent_id != @page.root.id }
+  } %>
+</div>
