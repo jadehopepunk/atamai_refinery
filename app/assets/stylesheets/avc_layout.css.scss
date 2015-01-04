@@ -20,3 +20,37 @@ a#sales_website {
     background-color: #67778e;
   }
 }
+
+section#page #body_content {
+  #mc_embed_signup {
+    .mc-field-group {
+      margin-bottom: 10px;
+
+      label {
+        width: 200px;
+
+        .asterisk {
+          color: #999999;
+        }
+      }
+
+      input, textarea, select {
+        width: 400px;
+        font-size: 18px;
+      }
+    }
+
+    input[type='submit'] {
+      font-size: 18px;
+      margin-left: 200px;
+    }
+
+    .indicates-required {
+      color: #999999;
+      font-size: 80%;
+      margin-left: 200px;
+      margin-top: -10px;
+      margin-bottom: 10px;
+    }
+  }
+}
