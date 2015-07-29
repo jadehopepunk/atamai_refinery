@@ -1,39 +1,85 @@
-body {
-  background-color: #323E2D;
+h1{
+  color: #aac03d;
+  a {
+    color: black;
+    &:link, &:active, &:visited {
+      color: black;
+    }
+  }
 }
 
-a, a:link, a:active, a:visited {
-  color: #4b5d45; 
+h1#body_content_title {
+  color: #aac03d }
+  
+h2, h5 {
+  color: #f3efe2;
 }
 
-h2 {
-  color: #5F785A;
+h3{
+  color: #505b39;
 }
 
+h4{
+  color: #aac03d;
+}
 
+#breadcrumb{
+  color: #EAA29F;
+}
+a {
+  color: #aac03d;
+  &:link, &:active, &:visited {
+    color: #4B5D45; }
+}
+
+#menu ul li{
+  a{
+    color: #f3efe2;
+    &:link, &:active, &:visited {
+      color: #f3efe2;
+    }
+    &:hover {
+      color: #aac03d; 
+    }
+  }
+  &.selected a {
+    color: white; 
+    &:hover {
+      color: white; 
+    }
+  }
+}
+
+#body_content_right, #side_body {
+  h2 {
+    color: #555;
+  } 
+}
+
+#page_container {
+ background-color: #f3efe2;
+}
 #page_container > header {
   background-color: #323f2f;
 }
 
 #page_container > header > .inner .search_box {
-  background-color: #1F2B1B; }
+  background-color: #1F2B1B;
+  /*background-color: #001334;*/
+}
 
 #page_container > header > .inner .search_box input#query {
 	background-color: #E7DDD4; }
 
 #page_container > footer {
-  border-top-color: #1F2B1B;
-  background-color: #323E2D;
-}
-
-#submenu_container {
-  background-color: #5a7155;
-
-  > a.parent {
-    background: #42543e;
-  }
+  background-color: #c8c89c;
+  color: #505b39;
 }
 
 #page_container > footer a {
   color: white;
+}
+
+#hero {
+  background-color: #302824;
 }

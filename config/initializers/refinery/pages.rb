@@ -41,4 +41,5 @@ Refinery::Pages.configure do |config|
   # config.use_view_templates = false
 
   # config.absolute_page_links = false
+  config.new_page_parts = true
 end

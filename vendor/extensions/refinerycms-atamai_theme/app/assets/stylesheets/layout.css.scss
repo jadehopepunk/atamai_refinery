@@ -49,7 +49,7 @@ iframe.map {
  margin: 1em auto;
 }
 
-$base-font-size: 18px;
+$base-font-size: 17px;
 $rythm: $base-font-size * 1.5;
 $line-height: 1.5em;    
 $h1-height: 2.369em;
@@ -58,50 +58,62 @@ $h2-height: 1.777em;
 body {
   margin: 0;
   padding: 0;
-  background-color: #323C48;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Open Sans Regular, sans-serif;
   font-size: $base-font-size;
   line-height: $line-height;
   font-weight: normal; }
 
 a {
-  color: #4b5d45;
-  &:link, &:active, &:visited {
-    color: #001334; }
   img, &:link img, &:active img, &:visited img {
-    border: none; } }
+    border: none; } 
+}
 
 h1 {
-  letter-spacing: 1px;
-  color: #57687C;
+  letter-spacing: 2px;
+  font-family: Montserrat Bold,  Open Sans Bold;
   line-height: 0.63318em;
   margin: $rythm 0 0.63318em 0;
-  font-size: $h1-height;
+  /*font-size: $h1-height; */
+  font-size: 67px;
     a {
-    color: black;
     text-decoration: none;
     font-size: 170%;
     &:link, &:active, &:visited {
-      color: black;
       text-decoration: none;
       font-size: 170%; } } }
 
 $h2-line-height: 0.84411930219471em;
 
 h2 {
-  font-size: $h2-height;
-  color: #57687C;
+  letter-spacing: 2px;
+  font-family: Montserrat Regular,  Open Sans Regular;
+  font-size: 55px;
   line-height: $h2-line-height;
   margin: 0;
   margin-bottom: $h2-line-height;
 }
 
+h3{
+  font-family: Montserrat Bold,  Open Sans Bold;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+
+h4{
+  font-family: Montserrat Bold,  Open Sans Bold;
+  letter-spacing: 2px;
+  font-size: 21px;
+}
+
+h5{
+  font-family: Montserrat Bold,  Open Sans Bold;
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
 ul {
   margin: $rythm 0 $rythm 0;
 }
-
-h1#body_content_title {
-  color: #001334 }
 
 p {
   margin: 0;
@@ -127,52 +139,59 @@ img {
   &.right {
     float: right;
     margin: 5px 0 0 10px; } }
-
+    
+          
+#bread_crumb{
+  padding: 20px 100px;
+  width: 100%;
+  float: left;
+  border-top: 1px solid #f3efe2;
+  p {
+    margin: 0;
+    padding-top: 32px;
+    &.font-size-small {
+      padding-top: 10px;
+    }
+  }
+}
+#body_content_title {
+  display: none;
+}
 #page_container {
-  background-image: url(/assets/layout/body_outside_background.gif);
-  background-repeat: repeat;
-  background-color: #E7DDD4;
   > {
     header {
-      background-color: #323f2f;
-      background-image: url(/assets/layout/header_background.gif);
-      background-repeat: repeat;
+      background-image: url(/assets/layout/head.png);
+      background-position: 20%;
+       background-size: cover;
+      background-repeat: no-repeat;
       margin: 0;
       padding: 0;
+      height: 320px;
       border-bottom: 2px solid black;
       position: relative;
       > .inner {
-        background-image: url(/assets/layout/header.jpg);
-        background-position: top center;
-        background-repeat: no-repeat;
+         float: left;
+         width: 100%;
         .search_box {
           bottom: 0;
           text-align: right;
-          background-color: #001334;
           > .inner {
-            width: 980px;
             margin: 0 auto;
             padding: 3px 10px; }
           input#query {
-            background-color: #E7DDD4;
             border: 2px solid black; } } }
       .logo_container {
-        height: 60px;
-        width: 960px;
-        margin: 0 auto;
+        height: 150px;
+        width:280px;
+        float: left;
         padding: 10px;
         line-height: 140%;
-        background-image: url(/assets/layout/watermark_white.png);
-        background-position: 60px -8px;
-        background-repeat: no-repeat;
-        h1#logo {
-          margin: 0;
-          padding: 0;
-          height: 80px;
-          text-align: right;
-          background-image: url(/assets/layout/atamai_village_logo.png);
-          background-position: top right;
-          background-repeat: no-repeat; } }
+        margin-left: 20px;
+        background-image: url(/assets/layout/Atamai_Village_logo_white_creme_primary.png);
+        background-size: 280px 120px;
+        background-position: 0px 8px;
+        background-repeat: no-repeat;        
+          }                                                                     
       h1 a {
         display: none;
         text-decoration: none;
@@ -187,11 +206,11 @@ img {
           font-size: 150%; } }
       #menu {
         display: block;
+        float: left;
         margin: 0;
-        padding: 0;
-
+        padding: 85px 20px 10px 0px;
         &:after {
-          clear: both;
+          clear: right;
           content: ".";
           display: block;
           height: 0;
@@ -201,60 +220,50 @@ img {
         ul {
           margin: 0;
           padding: 0;
-          width: 1000px;
           margin: 0 auto;
           list-style: none;
           li {
             display: block;
-            width: 105px;
             height: 27px;
             float: left;
             padding: 0;
-            margin: 0 5px 0 0;
+            margin: 0 12px 0 0;
             a {
               display: block;
-              width: 105px;
               height: 27px;
-              background-image: url(/assets/layout/tab.png);
-              color: #cccccc;
               text-align: center;
               line-height: 27px;
               text-decoration: none;
               &:link, &:active, &:visited {
                 display: block;
-                width: 105px;
                 height: 27px;
-                background-image: url(/assets/layout/tab.png);
-                color: #cccccc;
                 text-align: center;
                 line-height: 27px;
                 text-decoration: none; } }
             &.selected a {
-              background-image: url(/assets/layout/tab_highlighted.png);
-              height: 26px;
               margin-top: 1px;
-              color: white; }
+              font-weight: bold;
+              border-bottom: 1px solid #f3efe2;
+            }
             a {
-              color: white;
-              &:hover {
-                color: white; } } } } } }
-    footer {
-      border-top: 6px solid #001334;
+            border-style:none;
+               } } } } }
+    footer{
       width: 100%;
-      background-color: #323C48;
-      text-align: right;
-      color: #CCC; } } }
+      text-align: right; } 
+    footer p{
+    float: left;
+    }
+    #socialmedia_links{
+    }
+    #socialmedia_links a{
+    }} }
 
 section#page {
   width: 100%;
   margin: 0;
-  background-image: url(/assets/layout/body.jpg);
-  background-repeat: repeat-y;
-  background-position: top center;
-  border-bottom: 2px solid black;
   .section_contents {
     padding: 20px;
-    width: 960px;
     margin: 0 auto; }
   #body_content {
     @include clearfix();
@@ -285,27 +294,20 @@ section#page {
     width: 280px;
     float: right;
     clear: right;
-    h2 {
-      color: #555;
-    } } }
+   } 
+  }
 
 #submenu_container {
   width: 280px;
-  float: right;
-  background-color: #57687C;
+  float: left;
   margin-bottom: $rythm;
-
-  $radius: 10px;
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  border-radius: $radius;
+  margin: 40px 20px;
 
   > a.parent {
     display: block;
     margin: ($rythm / 2) 0;
     padding: ($rythm / 2) 10px;
-    color: white;
-    background: #001334;
+    color: #aac03d;
     text-decoration: none;
     line-height: $rythm;
   }
@@ -320,7 +322,7 @@ section#page {
     padding: 0;
 
     li.selected > a:link, li.selected > a {
-      color: white;
+      color: #505b39;
       font-weight: bold;
     }
 
@@ -331,11 +333,11 @@ section#page {
       padding: 0;
 
       a {
-        color: #000;
+        color: grey;
         text-decoration: none;
         font-weight: normal;
         &:link {
-          color: #000;
+          color: grey;
           text-decoration: none;
           font-weight: normal; }
         &:hover {
@@ -351,7 +353,6 @@ section#page {
 #hero {
   clear: both;
   display: block;
-  background-color: #302824;
   background-image: url(/assets/layout/hero_outside_background.gif);
   background-repeat: repeat;
   color: white;
@@ -424,7 +425,8 @@ section#page {
   footer {
     p {
       margin: 0;
-      float: left; }
+      float: left;
+      text-align:left;}
     aside {
       float: right;
       color: #888; } } }

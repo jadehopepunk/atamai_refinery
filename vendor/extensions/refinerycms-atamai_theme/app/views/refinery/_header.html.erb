@@ -1,6 +1,7 @@
 <div class="logo_container">
   <h1 id='logo'>
-    <%= link_to Refinery::Core.site_name, refinery.root_path %>
+        <%= link_to Refinery::Core.site_name, refinery.root_path %>
+    <%#=    <%=  link_to_unless_current("Home", { action: "index" }) %>
   </h1>
 </div>
 <%- presenter = Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self) %>
@@ -12,8 +13,15 @@
              :css => 'menu clearfix',
              :hide_children => true
            }) %>
-<div class="search_box">
+<%#<div class="search_box">
   <div class="inner">
     <%= render :partial => '/refinery/shared/search' %>
-  </div>
+  <%#</div>
+</div>
+%>
+
+<div id="bread_crumb">
+    <h2>
+    <%= get_bread_crumb() %>
+    </h2>
 </div>
