@@ -70,7 +70,8 @@ a {
 
 h1 {
   letter-spacing: 2px;
-  font-family: Montserrat Bold,  Open Sans Bold;
+  font-family: Montserrat,  Open Sans Bold;
+  font-weight: bold;
   line-height: 0.63318em;
   margin: $rythm 0 0.63318em 0;
   /*font-size: $h1-height; */
@@ -85,29 +86,32 @@ h1 {
 $h2-line-height: 0.84411930219471em;
 
 h2 {
-  letter-spacing: 2px;
-  font-family: Montserrat Regular,  Open Sans Regular;
-  font-size: 55px;
+  letter-spacing: 1px;
+  font-family: Montserrat,  Open Sans Regular;
+  font-size: 48px;
   line-height: $h2-line-height;
   margin: 0;
   margin-bottom: $h2-line-height;
 }
 
 h3{
-  font-family: Montserrat Bold,  Open Sans Bold;
-  letter-spacing: 2px;
+  font-family: Montserrat,  Open Sans Bold;
+  font-weight: bold;
+  letter-spacing: 1px;
   font-size: 18px;
 }
 
 h4{
-  font-family: Montserrat Bold,  Open Sans Bold;
-  letter-spacing: 2px;
+  font-family: Montserrat,  Open Sans Bold;
+  font-weight: bold;
+  letter-spacing: 1px;
   font-size: 21px;
 }
 
 h5{
-  font-family: Montserrat Bold,  Open Sans Bold;
-  letter-spacing: 2px;
+  font-family: Montserrat,  Open Sans Bold;
+  font-weight: bold;
+  letter-spacing: 1px;
   font-size: 15px;
 }
 
@@ -142,13 +146,17 @@ img {
     
           
 #bread_crumb{
-  padding: 20px 100px;
+  padding: 20px 20px;
   width: 100%;
   float: left;
+  font-weight:bold;
   border-top: 1px solid #f3efe2;
+      h2 {
+      margin: 0px 100px;
+      padding-top: 12px;
+    }
   p {
     margin: 0;
-    padding-top: 32px;
     &.font-size-small {
       padding-top: 10px;
     }
@@ -161,7 +169,7 @@ img {
   > {
     header {
       background-image: url(/assets/layout/head.png);
-      background-position: 20%;
+      /*background-position: 20%;*/
        background-size: cover;
       background-repeat: no-repeat;
       margin: 0;
@@ -250,15 +258,26 @@ img {
                } } } } }
     footer{
       width: 100%;
+      padding-bottom:20px;
       text-align: right; } 
     footer p{
     float: left;
+    text-align: left;
     }
-    #socialmedia_links{
+    } }
+    
+#footerLeaf {
+  display: block;
+    margin-left: auto;
+    margin-right: auto ;
+    margin-top: -72px;
+ }
+
+#socialmedia_links{
+      font-size: 36px;
     }
     #socialmedia_links a{
-    }} }
-
+    }
 section#page {
   width: 100%;
   margin: 0;
@@ -426,7 +445,8 @@ section#page {
     p {
       margin: 0;
       float: left;
-      text-align:left;}
+      text-align:left;
+      }
     aside {
       float: right;
       color: #888; } } }

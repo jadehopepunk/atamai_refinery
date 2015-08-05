@@ -5,13 +5,25 @@ module ApplicationHelper
           url = request.path
         breadcrumb = ''
         elements = url.split('/')
-        for i in 1...elements.size
+        for i in 1...elements.size - 1
           breadcrumb += elements[i]
-          breadcrumb += ': ' if i != elements.size - 1
+          breadcrumb += ' : ' if i != (elements.size - 2)
         end
         breadcrumb.titlecase
       rescue
-        'Not available'
+        'Home'
       end
     end
-end
+    
+    def get_title()
+      begin
+          url = request.path
+        breadcrumb = ''
+        elements = url.split('/')
+        breadcrumb = elements[elements.size - 1]
+        end
+        breadcrumb.titlecase
+      rescue
+        'Home'
+      end
+    end
