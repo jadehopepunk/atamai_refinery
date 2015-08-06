@@ -6,6 +6,7 @@ module ApplicationHelper
         breadcrumb = ''
         elements = url.split('/')
         for i in 1...elements.size - 1
+          #=  baseURL = "http://www.atamaivillage.org/" =
           breadcrumb += elements[i]
           breadcrumb += ' : ' if i != (elements.size - 2)
         end
@@ -27,3 +28,4 @@ module ApplicationHelper
         'Home'
       end
     end
+    

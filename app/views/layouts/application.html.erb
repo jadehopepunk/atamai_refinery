@@ -9,11 +9,12 @@
     <%= site_bar -%>
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
     <div id="page_container">
-      <header id="header">
+      <header id="header" >
         <div class="inner">
-          <div class="inner2">
+          <div class="inner2 position-fixed-top">
             <%= render '/refinery/header' -%>
           </div>
+             <%=render '/refinery/bread_crumb' -%>
         </div>
       </header>
       
