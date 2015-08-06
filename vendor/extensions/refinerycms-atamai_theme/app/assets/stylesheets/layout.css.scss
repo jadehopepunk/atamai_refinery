@@ -270,13 +270,12 @@ padding-top:180px;
               height: 27px;
               text-align: center;
               line-height: 27px;
-              text-decoration: none;
               &:link, &:active, &:visited {
                 display: block;
                 height: 27px;
                 text-align: center;
                 line-height: 27px;
-                text-decoration: none; } }
+                } }
             &.selected a {
               margin-top: 1px;
               font-weight: bold;
@@ -382,12 +381,8 @@ section#page {
 
       a {
         color: grey;
-        text-decoration: none;
-        font-weight: normal;
         &:link {
-          color: grey;
-          text-decoration: none;
-          font-weight: normal; }
+          color: grey;}
         &:hover {
           color: white; } } } }
 
@@ -480,3 +475,11 @@ section#page {
       float: right;
       color: #888; } } }
 
+      a {
+  text-decoration: none;
+  font-weight: normal;
+  &:link {
+    text-decoration: none;
+    font-weight: normal;
+  }
+}
