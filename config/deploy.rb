@@ -9,12 +9,23 @@ role :app, domain
 role :db,  domain, :primary => true
 
 set :scm, :git
-set :rails_env, "production"
-set :user, 'atamai'
-set :deploy_to, "/home/#{user}/#{application}/production"
-set :use_sudo, false
 set :rake, 'bundle exec rake'
+set :user, 'atamai'
+set :use_sudo, false
 set :deploy_via, :remote_cache
+
+task :production do
+  set :rails_env, "production"
+  set :deploy_to, "/home/#{user}/#{application}/production"
+  after('deploy:symlink', 'cache:clear')
+end
+
+task :staging do
+  set :rails_env, "staging"
+  set :deploy_to, "/home/#{user}/#{application}/staging"
+  # after('deploy:symlink', 'cruise_control:build')
+end
+
 
 namespace :deploy do
   task :start do ; end
