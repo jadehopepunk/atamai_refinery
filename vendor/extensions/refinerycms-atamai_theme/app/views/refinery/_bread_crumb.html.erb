@@ -1,9 +1,6 @@
 <div id="bread_crumb">
   <div id="bread_crumb_inner">
     <p>
-      <% for page in @page.ancestors.reverse %>
-        <%= link_to h(page.name), page %> &gt;
-      <% end %>
       <%= get_bread_crumb() %>
     </p>
     <h2>
