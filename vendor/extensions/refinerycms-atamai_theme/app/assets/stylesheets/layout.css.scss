@@ -82,47 +82,48 @@ a {
     border: none; } 
 }
 
-h1 {
+h5 {
   letter-spacing: 2px;
   font-family: Montserrat,  Open Sans Bold;
   font-weight: bold;
   line-height: 0.63318em;
-  margin: $rythm 0 0.63318em 0;
   /*font-size: $h1-height; */
   font-size: 67px;
-    a {
-    text-decoration: none;
-    font-size: 170%;
-    &:link, &:active, &:visited {
-      text-decoration: none;
-      font-size: 170%; } } }
+  }
 
 $h2-line-height: 0.84411930219471em;
 
-h2 {
+h1 {
   letter-spacing: 1px;
   font-family: Montserrat,  Open Sans Regular;
   font-size: 48px;
   line-height: $h2-line-height;
-  margin: 0;
-  margin-bottom: $h2-line-height;
+  margin: $rythm 0 0.63318em 0;
+     a {
+    text-decoration: none;
+    font-size: 170%;
+    &:link, &:active, &:visited {
+      text-decoration: none;
+      font-size: 170%; } }
+}
+
+h2{
+  font-family: Montserrat,  Open Sans Bold;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 18px;
+    margin-bottom: $h2-line-height;
+
 }
 
 h3{
   font-family: Montserrat,  Open Sans Bold;
   font-weight: bold;
   letter-spacing: 1px;
-  font-size: 18px;
-}
-
-h4{
-  font-family: Montserrat,  Open Sans Bold;
-  font-weight: bold;
-  letter-spacing: 1px;
   font-size: 21px;
 }
 
-h5{
+h4{
   font-family: Montserrat,  Open Sans Bold;
   font-weight: bold;
   letter-spacing: 1px;
@@ -170,7 +171,7 @@ img {
   clear:both;
   font-weight:bold;
   border-top: 1px solid #f3efe2;
-      h2 {
+      h1 {
       margin: 0px 100px;
       padding-top: 12px;
     }
@@ -340,7 +341,11 @@ section#page {
   width: 280px;
   float: left;
   margin-bottom: $rythm;
-  margin: 40px 20px;
+  margin: 0px 20px;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding-left: 30px;
+  background-color: #323c48;
 
   > a.parent {
     display: block;
@@ -356,7 +361,7 @@ section#page {
   }
 
   ul {
-    margin: 0 10px 0 10px;
+    margin: 0 0 0 10px;
     color: white;
     padding: 0;
 
