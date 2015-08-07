@@ -11,7 +11,7 @@
     <div id="page_container">
       <header id="header" >
         <div class="inner">
-          <div class="inner2 position-fixed-top">
+          <div id="sticky" class="inner2 position-fixed-top">
             <%= render '/refinery/header' -%>
           </div>
              <%=render '/refinery/bread_crumb' -%>
@@ -49,5 +49,6 @@
       </footer>
     </div>
     <%= render '/refinery/javascripts' %>
+    <script src="site_bar.js"></script>
   </body>
 </html>
