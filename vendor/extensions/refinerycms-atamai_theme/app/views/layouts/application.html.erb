@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="/font-awesome-4.4.0/css/font-awesome.min.css">
-<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-
 <%= render '/refinery/html_tag' %>
   <% site_bar = render('/refinery/site_bar', :head => true) -%>
   <%= render '/refinery/head' %>
@@ -9,20 +6,13 @@
     <%= site_bar -%>
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
     <div id="page_container">
-      <header id="header" >
+      <header id="header">
         <div class="inner">
-          <div id="sticky" class="inner2 position-fixed-top">
+          <div class="inner2">
             <%= render '/refinery/header' -%>
           </div>
-             <%=render '/refinery/bread_crumb' -%>
         </div>
       </header>
-      
-      <a href="http://www.atamaivillage.com/" id="sales_website">
-        <span class='inner'><span class='inner2'><span class='inner3'><span class="fixed"><span class="fixed_inner">
-          This is the village community website. Click here to see the sales and development site PURPLE MONKEY DISHWASHER.
-        </span></span></span></span></span>
-      </a>
 
       <%- if content_for? :hero %>
         <section id='hero'>
@@ -49,6 +39,5 @@
       </footer>
     </div>
     <%= render '/refinery/javascripts' %>
-    <script src="site_bar.js"></script>
   </body>
 </html>
