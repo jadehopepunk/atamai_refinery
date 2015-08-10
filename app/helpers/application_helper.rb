@@ -19,6 +19,9 @@ module ApplicationHelper
         breadcrumb = ''
         so_far = '/'
         elements = url.split('/')
+        if elements.size > 2
+          breadcrumb = '>> '
+        end
         for i in 1...elements.size - 1
         
             so_far += elements[i] + '/'
