@@ -303,8 +303,7 @@ section#page {
   width: 100%;
   margin: 0;
   .section_contents {
-    padding: 10px;
-    padding-top: 20px;
+    padding: 20px;
     margin: 0 auto; }
   #body_content {
     @include clearfix();
@@ -358,6 +357,7 @@ section#page {
   }
 
   #submenu > ul > li {
+    margin-bottom: $rythm;
   }
 
   ul {

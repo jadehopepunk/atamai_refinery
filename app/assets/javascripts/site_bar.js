@@ -24,7 +24,6 @@ function headerMovementSet(){
     }
     else{
       setHeadtopPos("0px");
-      alert("did this");
     }
 }
 
