@@ -172,11 +172,13 @@ img {
   font-weight:bold;
   border-top: 1px solid #f3efe2;
       h1 {
-      margin: 0px 100px;
+    /*  margin: 0px 100px; */
+      margin-left: 20px;
       padding-top: 12px;
     }
   p {
     margin: 0;
+      margin-left: 20px;
     &.font-size-small {
       padding-top: 10px;
     }
@@ -184,6 +186,7 @@ img {
 }
 #bread_crumb_inner{
   padding: 20px 20px;
+  
 padding-top:180px;
 }
 
@@ -202,7 +205,7 @@ padding-top:180px;
          float: left;
          width: 100%; }
       .inner2 {
-        border-bottom: 1px white solid;
+        border-bottom: 1px #f3efe2 solid;
             background-image: url(/assets/layout/head.png);
       /*background-position: 20%;*/
        background-size: cover;
