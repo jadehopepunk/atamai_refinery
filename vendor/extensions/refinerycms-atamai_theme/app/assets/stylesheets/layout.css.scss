@@ -165,27 +165,19 @@ img {
 #page_container {
   > {
     header {
-      margin: 0;
-      padding: 0;
-      height: 170px;
-      border-bottom: 2px solid black;
+      height: 150px;
       background-image: url(/assets/layout/head.png);
-      /*background-position: 20%;*/
       background-size: cover;
       background-repeat: no-repeat;
       overflow: hidden;
-      width:100%;
 
       .logo_container {
-        height: 150px;
-        width:280px;
+        height: 130px;
+        width: 280px;
         float: left;
-        padding: 10px;
-        line-height: 140%;
-        margin-left: 30px;
+        margin-top: 10px;
         background-image: url(/assets/layout/Atamai_Village_logo_white_creme_primary.png);
         background-size: 280px 120px;
-        background-position: 0px 8px;
         background-repeat: no-repeat;
       }
       h1 a {
@@ -199,12 +191,15 @@ img {
           text-decoration: none;
           letter-spacing: 1px;
           font-weight: normal;
-          font-size: 150%; } }
+          font-size: 150%;
+        }
+      }
       #menu {
         display: block;
-        float: left;
+        float: right;
         margin: 0;
-        padding: 85px 20px 10px 0px;
+        padding: 71px 0px 0px 0px;
+
         &:after {
           clear: right;
           content: ".";
@@ -218,31 +213,28 @@ img {
           padding: 0;
           margin: 0 auto;
           list-style: none;
+          text-transform: uppercase;
+          font-family: 'Arial', sans-serif;
+
           li {
-            display: block;
+            display: inline-block;
             height: 27px;
             float: left;
             padding: 0;
-            margin: 0 12px 0 0;
-            a {
-              display: block;
-              height: 27px;
-              text-align: center;
-              line-height: 27px;
-              &:link, &:active, &:visited {
-                display: block;
-                height: 27px;
-                text-align: center;
-                line-height: 27px;
-                } }
+            margin: 0 0 0 20px;
+
             &.selected a {
               margin-top: 1px;
               font-weight: bold;
               border-bottom: 1px solid #f3efe2;
             }
             a {
-            border-style:none;
-               } } } } }
+              border-style:none;
+            }
+          }
+        }
+      }
+    }
     footer{
       width: 100%;
       padding-bottom:20px;
