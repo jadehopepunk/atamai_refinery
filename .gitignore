@@ -10,6 +10,7 @@ db/*.sqlite3-journal
 *.log
 tmp
 tmp/**/*
+rbenv
 
 # Documentation
 doc/api

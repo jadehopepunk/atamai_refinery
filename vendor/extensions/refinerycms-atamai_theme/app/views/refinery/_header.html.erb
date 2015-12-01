@@ -1,9 +1,4 @@
-<div class="logo_container">
-  <h1 id='logo'>
-        <%= link_to(Refinery::Core.site_name, refinery.root_path) %>
-    <%#=    <%=  link_to_unless_current("Home", { action: "index" }) %>
-  </h1>
-</div>
+<%= link_to(Refinery::Core.site_name, refinery.root_path, class: 'logo_container', id: 'logo') %>
 <%- presenter = Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self) %>
 <%- presenter.max_depth = 0 %>
 <%- presenter.css = 'menu clearfix' %>

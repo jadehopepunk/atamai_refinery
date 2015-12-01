@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
 <%= render '/refinery/html_tag' %>
-  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <%# site_bar = render('/refinery/site_bar', :head => true) -%>
   <%= render '/refinery/head' %>
-    <link rel="stylesheet" href="/font-awesome-4.4.0/css/font-awesome.min.css">
-<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/font-awesome-4.4.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
   <body>
-    <%= site_bar -%>
+    <%#= site_bar -%>
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
     <div id="page_container">
       <header id="header" >
@@ -50,6 +50,6 @@
       </footer>
     </div>
     <%= render '/refinery/javascripts' %>
-    <script src="site_bar.js"></script>
+    <!--<script src="<%#= asset_path 'site_bar.js' %>"></script>-->
   </body>
 </html>

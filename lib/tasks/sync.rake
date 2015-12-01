@@ -14,9 +14,9 @@ namespace :sync do
     mysql_params += " -p#{db_config["password"]}" if db_config["password"]
     mysql_params += " #{db_config["database"]}"
 
-    echo_and_run "ssh #{username}@#{db_host} \"./dump_atamai_refinery.sh\""
-    echo_and_run "rsync -az --progress #{username}@#{db_host}:~/dump_avc.sql ./tmp/production_data.sql"
+    # echo_and_run "ssh #{username}@#{db_host} \"./dump_atamai_refinery.sh\""
+    # echo_and_run "rsync -az --progress #{username}@#{db_host}:~/dump_avc.sql ./tmp/production_data.sql"
     echo_and_run "rsync -az --progress #{username}@#{db_host}:~/avc/production/shared/system/* ./public/system/"
-    echo_and_run "mysql #{mysql_params} < ./tmp/production_data.sql"
+    # echo_and_run "mysql #{mysql_params} < ./tmp/production_data.sql"
   end
 end
