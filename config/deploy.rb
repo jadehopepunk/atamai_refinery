@@ -18,7 +18,7 @@ set :deploy_via, :remote_cache
 task :production do
   set :rails_env, "production"
   set :deploy_to, "/home/#{user}/#{application}/production"
-  after('deploy:create_symlink', 'cache:clear')
+  # after('deploy:create_symlink', 'cache:clear')
 end
 
 task :staging do
@@ -36,7 +36,7 @@ namespace :deploy do
   end
 end
 
-after "deploy:update_code" do
+before "deploy:finalize_update" do
   link_from_shared_to_current('config')
   run "ln -nfs #{shared_path}/assets #{release_path}/public/assets"
 end
