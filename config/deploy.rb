@@ -1,4 +1,5 @@
 require "bundler/capistrano"
+load 'deploy/assets'
 
 set :application, "avc"
 set :repository,  "https://github.com/craigambrose/atamai_refinery.git"
@@ -17,7 +18,7 @@ set :deploy_via, :remote_cache
 task :production do
   set :rails_env, "production"
   set :deploy_to, "/home/#{user}/#{application}/production"
-  after('deploy:symlink', 'cache:clear')
+  after('deploy:create_symlink', 'cache:clear')
 end
 
 task :staging do
@@ -49,13 +50,13 @@ def link_from_shared_to_current(path, dest_path = path)
   run "for f in `ls #{src_path}/` ; do ln -nsf #{src_path}/$f #{dst_path}/$f ; done"
 end
 
-desc "precompile the assets locally and push to server"
-task :deploy_assets, :except => { :no_release => true } do
-   run_locally("rake assets:clean assets:precompile")
-   run_locally("rsync -r --delete-after --progress ./public/assets/* #{user}@#{domain}:#{shared_path}/assets/")
-   run_locally("rake assets:clean")
-end
-after "deploy:update_code", "deploy_assets"
+# desc "precompile the assets locally and push to server"
+# task :deploy_assets, :except => { :no_release => true } do
+#    run_locally("rake assets:clean assets:precompile")
+#    run_locally("rsync -r --delete-after --progress ./public/assets/* #{user}@#{domain}:#{shared_path}/assets/")
+#    run_locally("rake assets:clean")
+# end
+# after "deploy:update_code", "deploy_assets"
 
 # namespace :dragonfly do
 #   desc "Symlink the Rack::Cache files"
