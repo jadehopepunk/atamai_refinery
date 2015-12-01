@@ -10,20 +10,13 @@
     <%#= site_bar -%>
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
     <div id="page_container">
-      <header id="header" >
-        <div class="inner">
-          <div id="sticky" class="inner2 position-fixed-top">
-            <%= render '/refinery/header' -%>
-          </div id="breadcrumb_sticky">
-             <%=render '/refinery/bread_crumb' -%>
-        </div>
+      <header id="header">
+        <%= render '/refinery/header' -%>
       </header>
-      
-      <a href="http://www.atamaivillage.com/" id="sales_website">
-        <span class='inner'><span class='inner2'><span class='inner3'><span class="fixed"><span class="fixed_inner">
-          This is the village community website. Click here to see the sales and development site.
-        </span></span></span></span></span>
-      </a>
+
+      <!--<div id="breadcrumb_sticky">-->
+        <!--<%= render '/refinery/bread_crumb' -%>-->
+      <!--</div>-->
 
       <%- if content_for? :hero %>
         <section id='hero'>

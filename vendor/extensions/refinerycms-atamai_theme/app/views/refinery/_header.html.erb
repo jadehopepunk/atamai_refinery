@@ -1,4 +1,4 @@
-<%= link_to(Refinery::Core.site_name, refinery.root_path, class: 'logo_container', id: 'logo') %>
+<a class="logo_container" href="/"></a>
 <%- presenter = Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self) %>
 <%- presenter.max_depth = 0 %>
 <%- presenter.css = 'menu clearfix' %>
