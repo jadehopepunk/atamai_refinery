@@ -1,5 +1,8 @@
-<%= render(:partial => "/refinery/sub_menu") if @page && @page.path != '/' && (local_assigns[:hide_sections].nil? || !local_assigns[:hide_sections].include?('submenu')) %>
+<div id="sidebar">
+  <%= render(:partial => "/refinery/sub_menu") if @page && @page.path != '/' %>
+</div>
 
+<h1><%= @page.title %></h1>
 <%= render_content_page(@page, {
       :hide_sections => local_assigns[:hide_sections],
       :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections]

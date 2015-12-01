@@ -68,54 +68,6 @@ a {
     border: none; } 
 }
 
-h5 {
-  letter-spacing: 2px;
-  font-family: Montserrat,  Open Sans Bold;
-  font-weight: bold;
-  line-height: 0.63318em;
-  /*font-size: $h1-height; */
-  font-size: 67px;
-  }
-
-$h2-line-height: 0.84411930219471em;
-
-h1 {
-  letter-spacing: 1px;
-  font-family: Montserrat,  Open Sans Regular;
-  font-size: 48px;
-  line-height: $h2-line-height;
-  margin: $rythm 0 0.63318em 0;
-     a {
-    text-decoration: none;
-    font-size: 170%;
-    &:link, &:active, &:visited {
-      text-decoration: none;
-      font-size: 170%; } }
-}
-
-h2{
-  font-family: Montserrat,  Open Sans Bold;
-  font-weight: bold;
-  letter-spacing: 1px;
-  font-size: 18px;
-    margin-bottom: $h2-line-height;
-
-}
-
-h3{
-  font-family: Montserrat,  Open Sans Bold;
-  font-weight: bold;
-  letter-spacing: 1px;
-  font-size: 21px;
-}
-
-h4{
-  font-family: Montserrat,  Open Sans Bold;
-  font-weight: bold;
-  letter-spacing: 1px;
-  font-size: 15px;
-}
-
 ul {
   margin: $rythm 0 $rythm 0;
 }

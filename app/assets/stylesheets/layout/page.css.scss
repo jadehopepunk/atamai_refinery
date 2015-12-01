@@ -1,19 +1,15 @@
 section#page {
   width: 100%;
-  margin: 0 0 4em 0;
+  margin: $rythm 0 4em 0;
   @include clearfix();
-
-  .section_contents {
-    padding: 20px 0;
-    margin: 0 auto;
-  }
 }
 
 $submenu-width: 280px;
 
-#submenu_container {
+#sidebar {
   width: $submenu-width;
   float: left;
+  min-height: 400px;
 }
 
 #body_content {
