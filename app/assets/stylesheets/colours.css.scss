@@ -1,5 +1,5 @@
 h1{
-  color: #aac03d;
+  color: $lime-green;
   a {
     color: black;
     &:link, &:active, &:visited {
@@ -9,10 +9,10 @@ h1{
 }
 
 h1#body_content_title {
-  color: #aac03d }
+  color: $lime-green }
   
 h2, h5 {
-  color: #aac03d;
+  color: $lime-green;
 }
 
 h3{
@@ -20,14 +20,14 @@ h3{
 }
 
 h4{
-  color: #aac03d;
+  color: $lime-green;
 }
 
 #bread_crumb p, #bread_crumb h3, #bread_crumb a{
-  color: #aac03d ;
+  color: $lime-green ;
 }
 a {
-  color: #aac03d;
+  color: $lime-green;
   &:link, &:active, &:visited {
     color: #4B5D45; }
 }
@@ -39,7 +39,7 @@ a {
       color: #f3efe2;
     }
     &:hover {
-      color: #aac03d; 
+      color: $lime-green;
     }
   }
   &.selected a {

@@ -1,0 +1,21 @@
+#page_container > footer {
+  width: 100%;
+  padding-bottom:20px;
+  text-align: right;
+
+  p {
+    float: left;
+    text-align: left;
+  }
+}
+
+#footerLeaf {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -72px;
+}
+
+#socialmedia_links{
+  font-size: 58px;
+}

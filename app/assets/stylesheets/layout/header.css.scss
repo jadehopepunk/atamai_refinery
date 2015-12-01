@@ -1,0 +1,65 @@
+#page_container > header {
+  height: 150px;
+  background-image: url(/assets/layout/head.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  .container {
+    height: 150px;
+  }
+
+  .logo_container {
+    height: 130px;
+    width: 280px;
+    float: left;
+    margin-top: 10px;
+    background-image: url(/assets/layout/Atamai_Village_logo_white_creme_primary.png);
+    background-size: 280px 120px;
+    background-repeat: no-repeat;
+  }
+  h1 a {
+    display: none;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: normal;
+    font-size: 150%;
+    &:link, &:visited, &:active {
+      display: none;
+      text-decoration: none;
+      letter-spacing: 1px;
+      font-weight: normal;
+      font-size: 150%;
+    }
+  }
+  #menu {
+    display: block;
+    float: right;
+    margin: 0;
+    padding: 71px 0px 0px 0px;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-transform: uppercase;
+      font-family: 'Arial', sans-serif;
+
+      li {
+        display: inline-block;
+        height: 27px;
+        padding: 0;
+        margin: 0 0 0 20px;
+
+        &.selected a {
+          margin-top: 1px;
+          font-weight: bold;
+          border-bottom: 1px solid #f3efe2;
+        }
+        a {
+          border-style:none;
+        }
+      }
+    }
+  }
+}

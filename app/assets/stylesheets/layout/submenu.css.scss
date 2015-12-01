@@ -1,0 +1,55 @@
+#submenu_container {
+  width: 280px;
+  float: left;
+  margin-bottom: $rythm;
+  margin: 0px 20px 0px 0px;
+  text-transform: uppercase;
+  font-size: 14px;
+
+  > a.parent {
+    display: block;
+    margin-bottom: ($rythm / 2);
+    padding-bottom: ($rythm / 2);
+    color: #aac03d;
+    text-decoration: none;
+    line-height: $rythm;
+    text-transform: none;
+    font-size: $rythm;
+  }
+
+  #submenu > ul > li {
+    margin-bottom: $rythm;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    > li {
+      display: block;
+      list-style: none outside none;
+      margin: 0;
+      padding: 0;
+
+      a {
+        color: grey;
+      }
+
+      a:hover {
+        color: black;
+        font-weight: bold;
+      }
+
+      &.selected {
+        > a:link, > a {
+          color: #505b39;
+          font-weight: bold;
+        }
+      }
+    }
+
+    ul {
+      margin-left: 10px;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+section#page {
+  width: 100%;
+  margin: 0;
+  .section_contents {
+    padding: 20px;
+    margin: 0 auto;
+  }
+  #body_content {
+    @include clearfix();
+    min-height: 600px;
+    img {
+      border: 2px solid #333;
+    }
+  }
+  #body_content_left, #body {
+    width: 660px;
+    float: left;
+    h2.section_headline {
+      font-size: 170%;
+      line-height: 120%;
+    }
+    form {
+      padding-top: 12px;
+      label {
+        float: left;
+        width: 150px;
+      }
+      input {
+        width: 200px;
+      }
+      .actions, .form-actions {
+        margin-left: 150px;
+      }
+      .actions input, .form-actions input {
+        width: auto;
+      }
+      .field {
+        margin: 12px 0;
+      }
+    }
+  }
+  #body_content_right, #side_body {
+    width: 280px;
+    float: right;
+    clear: right;
+  }
+}
