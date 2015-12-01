@@ -11,7 +11,9 @@
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
     <div id="page_container">
       <header id="header">
-        <%= render '/refinery/header' -%>
+        <div class="container">
+          <%= render '/refinery/header' -%>
+        </div>
       </header>
 
       <!--<div id="breadcrumb_sticky">-->
@@ -27,16 +29,20 @@
       <% end %>
 
       <section id="page">
-        <div class="section_contents">
-          <%= yield %>
+        <div class="container">
+          <div class="section_contents">
+            <%= yield %>
+          </div>
         </div>
       </section>
 
       <footer>
-        <div class="inner">
-          <div class="fixed">
-            <div class="fixed_inner">
-              <%= render '/refinery/footer' -%>
+        <div class="container">
+          <div class="inner">
+            <div class="fixed">
+              <div class="fixed_inner">
+                <%= render '/refinery/footer' -%>
+              </div>
             </div>
           </div>
         </div>

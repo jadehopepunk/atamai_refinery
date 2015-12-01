@@ -171,6 +171,10 @@ img {
       background-repeat: no-repeat;
       overflow: hidden;
 
+      .container {
+        height: 150px;
+      }
+
       .logo_container {
         height: 130px;
         width: 280px;
@@ -200,18 +204,9 @@ img {
         margin: 0;
         padding: 71px 0px 0px 0px;
 
-        &:after {
-          clear: right;
-          content: ".";
-          display: block;
-          height: 0;
-          visibility: hidden;
-        }
-
         ul {
           margin: 0;
           padding: 0;
-          margin: 0 auto;
           list-style: none;
           text-transform: uppercase;
           font-family: 'Arial', sans-serif;
@@ -219,7 +214,6 @@ img {
           li {
             display: inline-block;
             height: 27px;
-            float: left;
             padding: 0;
             margin: 0 0 0 20px;
 
@@ -437,4 +431,11 @@ section#page {
     text-decoration: none;
     font-weight: normal;
   }
+}
+
+$page-width: 1070px;
+
+.container {
+  max-width: $page-width;
+  margin: 0 auto;
 }
