@@ -1,6 +1,6 @@
 #page_container > header {
   height: 150px;
-  background-image: url(/assets/layout/darkhead.png);
+  background-image: image-url('layout/darkhead.png');
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -14,7 +14,7 @@
     height: 120px;
     width: 280px;
     margin-top: 10px;
-    background-image: url(/assets/layout/Atamai_Village_logo_white_creme_primary.png);
+    background-image: image-url('layout/Atamai_Village_logo_white_creme_primary.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     position: absolute;

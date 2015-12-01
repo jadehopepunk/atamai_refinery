@@ -101,46 +101,6 @@ img {
   display: none;
 }
 
-#hero {
-  clear: both;
-  display: block;
-  background-image: url(/assets/layout/hero_outside_background.gif);
-  background-repeat: repeat;
-  color: white;
-  font-size: 120%;
-  letter-spacing: 0.05em;
-  font-weight: normal;
-  line-height: 140%;
-  img.illustration {
-    float: left;
-    border: 2px solid black;
-    margin: 0 20px 10px 0; }
-  a {
-    color: #ff9933;
-    &:link, &:active, &:visited {
-      color: #ff9933; } }
-  .strong1 {
-    font-size: 130%;
-    line-height: 100%; }
-  .strong2 {
-    font-size: 120%;
-    line-height: 100%; }
-  .strong3 {
-    font-size: 150%;
-    line-height: 100%; }
-  .inner {
-    background-image: url(/assets/layout/hero_outside_top.jpg);
-    background-position: top left;
-    background-repeat: repeat-x;
-    .inner2 {
-      background-image: url(/assets/layout/hero.jpg);
-      background-position: top center;
-      background-repeat: repeat-y;
-      .inner3 {
-        background-image: url(/assets/layout/hero_top.jpg);
-        background-position: top center;
-        background-repeat: no-repeat; } } } }
-
 #blog_posts article {
   background-color: #f7f4f2;
   border: 2px solid #ece3dc;
