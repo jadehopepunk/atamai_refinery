@@ -1,36 +1,25 @@
 #page_container > header {
   height: 150px;
-  background-image: url(/assets/layout/head.png);
+  background-image: url(/assets/layout/darkhead.png);
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
 
   .container {
     height: 150px;
+    position: relative;
   }
 
   .logo_container {
-    height: 130px;
+    height: 120px;
     width: 280px;
-    float: left;
     margin-top: 10px;
     background-image: url(/assets/layout/Atamai_Village_logo_white_creme_primary.png);
-    background-size: 280px 120px;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-  }
-  h1 a {
-    display: none;
-    text-decoration: none;
-    letter-spacing: 1px;
-    font-weight: normal;
-    font-size: 150%;
-    &:link, &:visited, &:active {
-      display: none;
-      text-decoration: none;
-      letter-spacing: 1px;
-      font-weight: normal;
-      font-size: 150%;
-    }
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   #menu {
     display: block;
@@ -60,6 +49,21 @@
           border-style:none;
         }
       }
+    }
+  }
+}
+
+@media(max-width: 900px) {
+  #page_container > header {
+    height: 110px;
+
+    .logo_container {
+      height: 90px;
+      width: 210px;
+    }
+
+    #menu {
+      padding-top: 46px;
     }
   }
 }
