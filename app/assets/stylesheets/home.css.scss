@@ -1,20 +1,30 @@
 /* HOME PAGE HERO */
 
 #hero {
-  img.illustration {
-    margin-top: 5px;
+  border-top: 1px solid white;
+  color: white;
+  text-align: center;
+
+  h1.site-title {
+    color: #E7E4D9;
+    text-align: center;
+    max-width: 800px;
+    margin: 100px auto 40px auto;
+    font-size: 62px;
   }
-  
-  .text {
-    margin-left: 324px;
-    line-height: 150%;
-    
-    p {
-      margin-top: 0;
-    }
-    
-    p:last-child {
-      margin-bottom: 0;
+
+  a.main-link {
+    color: #E7E4D9;
+    background-color: #AEC14C;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    font-size: 28px;
+    margin-bottom: 100px;
+
+    &:hover {
+      background-color: darken(#AEC14C, 8%);
     }
   }
 }

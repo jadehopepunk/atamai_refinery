@@ -1,13 +1,18 @@
 #page_container > header {
-  height: 150px;
-  background-image: image-url('layout/darkhead.png');
+  min-height: 150px;
+  background-image: image-url('layout/lighthead.png');
+  background-position: 0px -79px;
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
 
-  .container {
+  .normal-header {
+    @include clearfix();
     height: 150px;
-    position: relative;
+
+    .container {
+      position: relative;
+    }
   }
 
   .logo_container {
@@ -55,7 +60,7 @@
 
 @media(max-width: 900px) {
   #page_container > header {
-    height: 110px;
+    min-height: 110px;
 
     .logo_container {
       height: 90px;

@@ -9,24 +9,26 @@
   <body>
     <%#= site_bar -%>
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
-    <div id="page_container">
+    <div id="page_container" class="<%= 'home' if current_page?('/') %>">
       <header id="header">
-        <div class="container">
-          <%= render '/refinery/header' -%>
+        <div class="normal-header">
+          <div class="container">
+            <%= render '/refinery/header' -%>
+          </div>
         </div>
-      </header>
+
+        <%- if content_for? :hero %>
+          <section id='hero'>
+            <div class="container">
+              <%= yield :hero %>
+            </div>
+          </section>
+        <% end %>
+\      </header>
 
       <!--<div id="breadcrumb_sticky">-->
         <!--<%= render '/refinery/bread_crumb' -%>-->
       <!--</div>-->
-
-      <%- if content_for? :hero %>
-        <section id='hero'>
-          <div class='inner'><div class='inner2'><div class='inner3'><div class="fixed"><div class="fixed_inner">
-            <%= yield :hero %>
-          </div></div></div></div></div>
-        </section>
-      <% end %>
 
       <section id="page">
         <div class="container">
