@@ -252,7 +252,7 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     truncate_html (0.9.3)
-    tzinfo (0.3.42)
+    tzinfo (0.3.61)
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
